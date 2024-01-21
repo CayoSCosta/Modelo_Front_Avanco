@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .container {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .text-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.7);
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .container:hover .text-container {
+            opacity: 1;
+        }
+
+        .image-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .container:hover .image-container {
+            opacity: 0;
+        }
+
+        /* Associe cada classe de texto e imagem conforme necessário */
+        .text-container-1 { z-index: 1; }
+        .image-container-1 { background-image: url('assets/img/biombo.png'); }
+
+        .text-container-2 { z-index: 2; }
+        .image-container-2 { background-image: url('assets/img/celest.png'); }
+
+        .text-container-3 { z-index: 3; }
+        .image-container-3 { background-image: url('assets/img/capa.png'); }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="text-container text-container-1">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+        </div>
+        <div class="image-container image-container-1"></div>
+        
+        <div class="text-container text-container-2">
+            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+        </div>
+        <div class="image-container image-container-2"></div>
+
+        <div class="text-container text-container-3">
+            <p>when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+        </div>
+        <div class="image-container image-container-3"></div>
+    </div>
+</body>
+</html>

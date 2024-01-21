@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+   <html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <!--=============== REMIXICONS ===============-->
+      <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+
+      <!--=============== CSS ===============-->
+      <link rel="stylesheet" href="assets/css/styles.css">
+
+          
+      <title>Responsive dropdown menu - Bedimcode</title>
+   </head>
+   <body>
+      <!--=============== HEADER ===============-->
+      <header class="header">
+        <nav class="nav container">
+          <div class="nav__data">
+            <a href="#" class="nav__logo">
+              <img src="assets/img/logo-avanco.png" alt="">
+            </a>
+    
+          </div>
+    
+          <!--=============== NAV MENU ===============-->
+          <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+              <li><a href="index.html" class="nav__link">Home</a></li>
+    
+              <li><a href="about.html" class="nav__link">Quem somos</a></li>
+    
+              <!--=============== DROPDOWN 1 ===============-->
+              <li class="dropdown__item">
+                <div class="nav__link">
+                  <a href="produtos.html">Soluções Acústicas <i class="ri-arrow-down-s-line dropdown__arrow"></i></a>
+                </div>
+    
+                <ul class="dropdown__menu">
+                  <li>
+                    <a href="#" class="dropdown__link">
+                      Ecoslim - Baffle
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown__link">
+                      Ecoslim - Módulo de Baffle
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown__link">
+                      Ecoslim - Nuvem
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown__link">
+                      Ecoslim - Divisória Cobogó
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown__link">
+                      Ecoslim - Painéis
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown__link">
+                      Ecoslim - Biombos
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown__link">
+                      Ecoslim - Office
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown__link">
+                      Nuvem Sonic
+                    </a>
+                  </li>
+    
+                  <li>
+                    <a href="#" class="dropdown__link">
+                      Baffles Nett
+                    </a>
+                  </li>
+    
+                  <li>
+                    <a href="#" class="dropdown__link">
+                      Revestimento Innovatech
+                    </a>
+                  </li>
+    
+    
+                </ul>
+              </li>
+    
+              <li><a href="servicos.html" class="nav__link">Serviços</a></li>
+    
+              <li><a href="ctalogo.html" class="nav__link">Catálogo</a></li>
+    
+              <li><a href="contato.html" class="nav__link">Contato</a></li>
+            </ul>
+          </div>
+    
+          <div class="nav__icons">
+            <i class="ri-search-line nav__search" id="search-btn"></i>
+            <i class="ri-user-line nav__login" id="login-btn"></i>
+    
+            <div class="nav__toggle" id="nav-toggle">
+              <i class="ri-menu-line nav__burger"></i>
+              <i class="ri-close-line nav__close"></i>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <section class="container-cadastro">
+        <div class="cadastro-page-image">
+          <img src="assets/img/img-login.png" alt="">
+        </div>
+        
+
+        <div class="box-container-cadastro">
+          <div id="mensagem-banner" class="alert" style="display: none;">
+            <div id="progress-bar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+             <div id="mensagem-texto"></div>
+          </div>
+
+            <div class="box-cadastro">
+                <h4 class="contato">Faça seu cadastro e tenha acesso aos nossos catálogos</h4>
+                <form id="cadastro" action="#" method="post" onsubmit="return enviarFormulario()">
+                    <div class="row">
+                        <div class="col">
+                            <label for="nome">Nome*</label>
+                            <input type="text" name="nome" id="nome" class="form-control">
+                        </div>
+                        <div class="col">
+                          <label for="nome">Sobrenome*</label>
+                          <input type="text" name="nome" id="nome" class="form-control">
+                      </div>
+                    </div>
+
+                    <div class="col">
+                        <label for="email">E-mail*</label>
+                        <input type="email" name="email" id="email">
+                    </div>
+
+                    <div class="col">
+                        <label for="senha">Senha*</label>
+                        <input type="password" name="senha" id="senha">
+                    </div>
+
+                    <div class="col">
+                        <label for="confirmesenha">Confirme a senha*</label>
+                        <input type="password" name="confirmesenha" id="confirmesenha" oninput="validarSenha()">
+                        <p id="mensagem-erro" class="erro"></p>
+                    </div>
+
+                    <div class="col">
+                        <label for="telefone">Telefone*</label>
+                        <input type="tel" name="telefone" id="telefone">
+                    </div>
+
+                    <div class="col">
+                        <label for="empresa">Empresa*</label>
+                        <input type="text" name="empresa" id="empresa">
+                    </div>
+
+                    <div class="row">
+                        <div class="col custom-col">
+                            <label for="uf">UF*</label>
+                            <select name="uf" id="uf" class="form-control">
+                                <option class="select-option" value="UF" selected>UF*</option>
+                                <option class="select-option" value="SP">SP</option>
+                                <option class="select-option" value="RJ">RJ</option>
+                                <option class="select-option" value="ES">ES</option>
+                                <option class="select-option" value="MG">MG</option>
+                            </select>
+                        </div>
+                        <div class="col custom-col">
+                            <label for="cidade">Cidade*</label>
+                            <input type="text" name="cidade" id="cidade" class="form-control">
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col">
+                            <label for="area">Área de Atuação*</label>
+                            <select name="area" id="area">
+                                <option class="select-option" value="valor1" selected>Área de Atuação*</option>
+                                <option class="select-option" value="valor2">Escritório de Arquitetura e Design</option>
+                                <option class="select-option" value="valor3">Engenharia e Construção Civil</option>
+                                <option class="select-option" value="valor4">Consultoria em Acústica</option>
+                                <option class="select-option" value="valor5">Departamento de Compras</option>
+                                <option class="select-option" value="valor5">Estudante</option>
+
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="btn-contato-cadastro">
+                        <input class="btn-submit" type="submit" value="Cadastrar">
+                    </div>
+                </form>
+            </div>
+        </div>
+     </section>
+
+
+
+
+
+
+    <script>
+        function validarSenha() {
+            var senha = document.getElementById("senha").value;
+            var confirmesenha = document.getElementById("confirmesenha").value;
+            var mensagemErro = document.getElementById("mensagem-erro");
+
+            if (senha !== confirmesenha) {
+                mensagemErro.innerHTML = "*As senhas não conferem.";
+                return false;
+            } else {
+                mensagemErro.innerHTML = "";
+                return true;
+            }
+        }
+
+        function enviarFormulario() {
+            if (validarSenha()) {
+                var formulario = document.getElementById("cadastro");
+                var dadosFormulario = new FormData(formulario);
+
+                fetch("..\\db\\processarCadastro.php", {
+                        method: "POST",
+                        body: dadosFormulario
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            exibirMensagem(data.message, "sucesso");
+                            $('html, body').animate({
+                                scrollTop: 0
+                            }, 'slow'); // Animação suave ao rolar para o topo
+                            // Redirecione ou realize outras ações após um cadastro bem-sucedido, se necessário.
+                        } else {
+                            exibirMensagem(data.message, "erro");
+                        }
+                    })
+                    .catch(error => {
+                        console.error("Erro ao processar o formulário:", error);
+                    });
+            }
+
+            return false; // Evita o envio tradicional do formulário
+        }
+
+        function exibirMensagem(mensagem, tipo) {
+            var mensagemBanner = document.getElementById("mensagem-banner");
+            var progressBar = document.getElementById("progress-bar");
+            var mensagemTexto = document.getElementById("mensagem-texto");
+
+            mensagemBanner.style.display = "block";
+
+            // Remover classes existentes
+            mensagemBanner.classList.remove("alert-success", "alert-danger");
+            progressBar.classList.remove("bg-success", "bg-danger");
+
+            if (tipo === "sucesso") {
+                mensagemBanner.classList.add("alert-success");
+                progressBar.classList.add("bg-success");
+            } else if (tipo === "erro") {
+                mensagemBanner.classList.add("alert-danger");
+                progressBar.classList.add("bg-danger");
+            }
+
+            progressBar.style.width = "100%";
+            mensagemTexto.innerHTML = mensagem;
+
+            var tempoTotal = 3000; // Tempo total de exibição em milissegundos
+            var intervalo = 100; // Intervalo para atualização da barra de progresso
+
+            var progresso = 0;
+
+            var animacao = setInterval(function() {
+                progressBar.style.width = (progresso / tempoTotal) * 100 + "%";
+                progresso += intervalo;
+
+                if (progresso >= tempoTotal) {
+                    clearInterval(animacao);
+                    mensagemBanner.style.display = "none";
+
+                    // Redireciona para a index.php após a animação da barra de progresso
+                    window.location.href = "/";
+                }
+            }, intervalo);
+        }
+    </script>
+   
+      <!--=============== MAIN JS ===============-->
+      <script src="assets/js/main.js"></script>
+
+   </body>
+</html>

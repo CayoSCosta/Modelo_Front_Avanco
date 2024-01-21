@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+   <html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <!--=============== REMIXICONS ===============-->
+      <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+
+      <!--=============== CSS ===============-->
+      <link rel="stylesheet" href="assets/css/styles.css">
+
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha384-..." crossorigin="anonymous">
+  
+      <title>Responsive dropdown menu - Bedimcode</title>
+   </head>
+   <body>
+      <!--=============== HEADER ===============-->
+      <header class="header">
+         <nav class="nav container">
+            <div class="nav__data">
+               <a href="#" class="nav__logo">
+                  <img src="assets/img/logo-avanco.png" alt="">
+               </a>
+            
+            </div>
+
+            <!--=============== NAV MENU ===============-->
+            <div class="nav__menu" id="nav-menu">
+               <ul class="nav__list">
+                  <li><a href="#" class="nav__link">Home</a></li>
+
+                  <li><a href="#" class="nav__link">Quem somos</a></li>
+
+                  <!--=============== DROPDOWN 1 ===============-->
+                  <li class="dropdown__item">
+                     <div class="nav__link">
+                        Soluções Acústicas <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                     </div>
+
+                     <ul class="dropdown__menu">
+                        <li>
+                           <a href="#" class="dropdown__link">
+                              <i class="ri-pie-chart-line"></i> Nuvem Sonic
+                           </a>                          
+                        </li>
+
+                        <li>
+                           <a href="#" class="dropdown__link">
+                              <i class="ri-arrow-up-down-line"></i>Baffles= Nett
+                           </a>
+                        </li>
+
+                        <li>
+                           <a href="#" class="dropdown__link">
+                              <i class="ri-arrow-up-down-line"></i>Revestimento Innovatech
+                           </a>
+                        </li>
+                        
+                        
+                     </ul>
+                  </li>
+                  
+                  <li><a href="#" class="nav__link">Serviços</a></li>
+
+                  <li><a href="#" class="nav__link">Catálogo</a></li>
+
+                  <li><a href="#" class="nav__link">Contato</a></li>
+               </ul>
+            </div>
+
+            <div class="nav__icons">
+               <i class="ri-search-line nav__search" id="search-btn"></i>
+               <i class="ri-user-line nav__login" id="login-btn"></i>
+
+               <div class="nav__toggle" id="nav-toggle">
+                  <i class="ri-menu-line nav__burger"></i>
+                  <i class="ri-close-line nav__close"></i>
+               </div>
+            </div>
+         </nav>
+      </header>
+
+      <div class="glide">
+         <div class="glide__track" data-glide-el="track">
+           <ul class="glide__slides">
+             <li class="glide__slide">
+               <img src="assets/img/Switch1.png" class="d-block imgsize" alt="...">
+               <div class="carousel-caption d-none d-md-block">
+                 <h5>First slide label</h5>
+                 <p>Some representative placeholder content for the first slide.</p>
+               </div>
+             </li>
+             <li class="glide__slide">
+               <img src="assets/img/Wave1.png" class="d-block imgsize" alt="...">
+               <div class="carousel-caption d-none d-md-block">
+                 <h5>First slide label</h5>
+                 <p>Some representative placeholder content for the first slide.</p>
+               </div>
+             </li>
+             <li class="glide__slide">
+               <img src="assets/img/Wave2.png" class="d-block imgsize" alt="...">
+               <div class="carousel-caption d-none d-md-block">
+                 <h5>First slide label</h5>
+                 <p>Some representative placeholder content for the first slide.</p>
+               </div>
+             </li>
+           </ul>
+         </div>
+       </div>
+
+      <div class="container-marc">
+         <article class="c-carousel c-carousel--simple carousel-products">
+    
+           <div class="titulo">
+             <h2 class="name-products">Produtos</h2>
+             <div class="botoes-carousel">
+               <button class="js-carousel--simple-prev"><i class="fa-solid fa-arrow-left"></i></button>
+               <button class="js-carousel--simple-next"><i class="fa-solid fa-arrow-right"></i></button>
+             </div>
+           </div>
+    
+           <div class="products-slides">
+             <div class="c-carousel__slides js-carousel--simple">
+               <div class="c-carousel__slide img_glider">
+                 <img src="assets/img/baffleb11.png" alt="">
+                 <p class="products-slides-description">Baffle - B11</p>
+               </div>
+               <div class="c-carousel__slide img_glider">
+                 <img src="assets/img/urbano1.png" alt="">
+                 <p class="products-slides-description">Divisória Cobogó - Urbano 1</p>
+               </div>
+               <div class="c-carousel__slide img_glider">
+                 <img src="assets/img/celest.png" alt="">
+                 <p class="products-slides-description">Grid Acústico - Celest</p>
+               </div>
+               <div class="c-carousel__slide img_glider">
+                 <img src="assets/img/trio.png" alt="">
+                 <p class="products-slides-description">Nuvem - Triangular</p>
+               </div>
+               <div class="c-carousel__slide img_glider">
+                 <img src="assets/img/modulonave.png" alt="">
+                 <p class="products-slides-description">Módulo de Baffle - Nava</p>
+               </div>
+               <div class="c-carousel__slide img_glider">
+                 <img src="assets/img/painelcurv10.png" alt="">
+                 <p class="products-slides-description">Painel para parede - Curv 10</p>
+               </div>
+               <div class="c-carousel__slide img_glider">
+                 <img src="assets/img/painelarrow.png" alt="">
+                 <p class="products-slides-description">Painel para parede - Arrow</p>
+               </div>
+               <div class="c-carousel__slide img_glider">
+                 <img src="assets/img/biombocurv.png" alt="">
+                 <p class="products-slides-description">Biombo - Curv</p>
+               </div>
+               <div class="c-carousel__slide img_glider">
+                 <img src="assets/img/serasa.jpg" alt="">
+                 <p class="products-slides-description">Baffle Classico - Serasa</p>
+               </div>
+               <div class="c-carousel__slide img_glider">
+                 <img src="assets/img/nuvem.jpeg" alt="">
+                 <p class="products-slides-description">Nuvem Classico - </p>
+               </div>
+               <div class="c-carousel__slide img_glider">
+                 <img src="assets/img/ambev.JPG" alt="">
+                 <p class="products-slides-description">Painel Innovatech - Ambev</p>
+               </div>
+             </div>
+           </div>
+          
+         </article>
+      
+    
+         <section class="main" id="home">
+           <div class="box-container">
+             <div class="content">
+               <div class="texto-apresentacao">
+                 <h3>Encomendar produtos mais facilmente</h3>
+                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi rutrum dictum nunc, a aliquet ante pharetra eu. In hac habitasse platea dictumst. Sed vitae est nec nulla interdum rhoncus.</p>
+                 <span class="btn">Saiba mais</span>
+               </div>
+               <div class="img-flex">
+                 <img src="assets/img/Switch1.png" alt="">
+               </div>
+             </div>
+           </div>
+         </section>  
+    
+         <section class="main" id="home">
+           <div class="box-container">
+             <div class="content">
+               <div class="img-flex">
+                 <img src="assets/img/Switch1.png" alt="">
+               </div>
+               <div class="texto-apresentacao">
+                 <h3>Encomendar produtos mais facilmente</h3>
+                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi rutrum dictum nunc, a aliquet ante pharetra eu. In hac habitasse platea dictumst. Sed vitae est nec nulla interdum rhoncus.</p>
+                 <span class="btn">Saiba mais</span>
+               </div>
+             </div>
+           </div>
+         </section>  
+    
+    
+         <div class="img-apresentacao">
+           <h3>NOME DA OBRA</h3>
+         </div>
+        
+         <section class="main" id="home">
+           <div class="box-container">
+             <div class="content">
+               <div class="texto-apresentacao">
+                 <h3>Encomendar produtos mais facilmente</h3>
+                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi rutrum dictum nunc, a aliquet ante pharetra eu. In hac habitasse platea dictumst. Sed vitae est nec nulla interdum rhoncus.</p>
+                 <span class="btn">Saiba mais</span>
+               </div>
+               <div class="img-flex">
+                 <img src="assets/img/Switch1.png" alt="">
+               </div>
+             </div>
+           </div>
+          </section>  
+    
+       </div>
+        
+    
+    
+       <footer>
+          <div class="conteudo-footer">
+              <div class="footer-social">
+                  <div>
+                      <p>Novidades Avanço:</p>
+                      <div class="email-field">
+                        <input type="text" id="addemail" placeholder="Coloque seu email">
+                        <label for="addemail" class="fa-solid fa-arrow-right"></label>
+                      </div>
+                  </div>
+                  <div class="icon-social"> 
+                      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                      <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                  </div>
+              </div>
+    
+              <div class="footer-links">
+                  <div class="ul-um">
+                      <ul>
+                          <li><a href="./index.php" class="nav_link">Home</a></li>
+                          <li><a href="./solucoes.php" class="nav_link">Soluções Acústicas</a></li>
+                          <li><a href="./servicos.php" class="nav_link">Serviços</a></li>
+                          <li><a href="./catalogo.php" class="nav_link">Catálogo</a></li>
+    
+                      </ul>
+                  </div>
+    
+                  <div class="ul-do">
+                      <ul>
+                          <li><a href="./about.php" class="nav_link">Quem Somos</a></li>
+                          <li><a href="./contato.php" class="nav_link">Contato</a></li>
+                          <li><a href="./sustentabilidade.php" class="nav_link">Sustentabilidade</a></li>
+                      </ul>
+                  </div>
+                  <div class="ul-tr">
+                      <ul>
+                          <li><a href="tel:1131643610">(11) 3164-3610</a></li>
+                          <li><a href="tel:1131643610">contato@avancoacustica.com.br</a></li>
+                      </ul>
+                  </div>
+              </div>
+    
+    
+          </div>
+    
+          <div class="direitos">© 2023 • Todos os Direitos Reservados à Avanço Soluções Acústicas</div>
+    
+       </footer>
+
+   
+      <!--=============== MAIN JS ===============-->
+      <script src="assets/js/main.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+      <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+   </body>
+</html>
