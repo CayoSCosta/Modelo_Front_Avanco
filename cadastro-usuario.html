@@ -10,6 +10,7 @@
       <!--=============== CSS ===============-->
       <link rel="stylesheet" href="assets/css/styles.css">
 
+      <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
           
       <title>Responsive dropdown menu - Bedimcode</title>
    </head>
@@ -34,60 +35,53 @@
               <!--=============== DROPDOWN 1 ===============-->
               <li class="dropdown__item">
                 <div class="nav__link">
-                  <a href="produtos.html">Soluções Acústicas <i class="ri-arrow-down-s-line dropdown__arrow"></i></a>
+                  <a class="solucoes" href="produtos.html">Soluções Acústicas <i class="ri-arrow-down-s-line dropdown__arrow"></i></a>
                 </div>
     
                 <ul class="dropdown__menu">
                   <li>
-                    <a href="#" class="dropdown__link">
-                      Ecoslim - Baffle
+                    <a href="#" class="dropdown__link" id="ecoslim-grid-link" data-target-produto="grid-produto">
+                      Ecoslim - Grid
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="dropdown__link">
+                    <a href="#" class="dropdown__link" id="ecoslim-modulo-baffle-link">
                       Ecoslim - Módulo de Baffle
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="dropdown__link">
+                    <a href="#" class="dropdown__link" id="ecoslim-baffle-link">
+                      Ecoslim - Baffle
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown__link" id="ecoslim-nuvem-link">
                       Ecoslim - Nuvem
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="dropdown__link">
+                    <a href="#" class="dropdown__link" id="ecoslim-divisoria-link">
                       Ecoslim - Divisória Cobogó
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="dropdown__link">
+                    <a href="#" class="dropdown__link" id="ecoslim-painel-link">
                       Ecoslim - Painéis
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="dropdown__link">
+                    <a href="#" class="dropdown__link" id="ecoslim-biombo-link">
                       Ecoslim - Biombos
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="dropdown__link">
+                    <a href="#" class="dropdown__link" id="ecoslim-office-link">
                       Ecoslim - Office
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="dropdown__link">
-                      Nuvem Sonic
-                    </a>
-                  </li>
-    
-                  <li>
-                    <a href="#" class="dropdown__link">
-                      Baffles Nett
-                    </a>
-                  </li>
-    
-                  <li>
-                    <a href="#" class="dropdown__link">
-                      Revestimento Innovatech
+                    <a href="#" class="dropdown__link" id="ecoslim-classica-link">
+                     Linha Clássica
                     </a>
                   </li>
     
@@ -104,7 +98,6 @@
           </div>
     
           <div class="nav__icons">
-            <i class="ri-search-line nav__search" id="search-btn"></i>
             <i class="ri-user-line nav__login" id="login-btn"></i>
     
             <div class="nav__toggle" id="nav-toggle">
@@ -302,5 +295,58 @@
       <!--=============== MAIN JS ===============-->
       <script src="assets/js/main.js"></script>
 
+      <script>
+        $(document).ready(function () {
+          $(".div-produto").css("display", "none");
+      
+          $("#ecoslim-grid-link").on("click", function (e) {
+            e.preventDefault();
+            window.location.href = "produtos.html?produto=grid";
+          });
+      
+          $("#ecoslim-modulo-baffle-link").on("click", function (e) {
+            e.preventDefault();
+            window.location.href = "produtos.html?produto=modulo-baffle";
+          });
+    
+          $("#ecoslim-baffle-link").on("click", function (e) {
+            e.preventDefault();
+            window.location.href = "produtos.html?produto=baffle";
+          });
+      
+          $("#ecoslim-nuvem-link").on("click", function (e) {
+            e.preventDefault();
+            window.location.href = "produtos.html?produto=nuvem";
+          });
+      
+          $("#ecoslim-divisoria-link").on("click", function (e) {
+            e.preventDefault();
+            window.location.href = "produtos.html?produto=divisoria";
+          });
+    
+          $("#ecoslim-painel-link").on("click", function (e) {
+            e.preventDefault();
+            window.location.href = "produtos.html?produto=painel";
+          });
+    
+          $("#ecoslim-biombo-link").on("click", function (e) {
+            e.preventDefault();
+            window.location.href = "produtos.html?produto=biombo";
+          });
+    
+          $("#ecoslim-classica-link").on("click", function (e) {
+            e.preventDefault();
+            window.location.href = "produtos.html?produto=classica";
+          });
+    
+          $("#ecoslim-office-link").on("click", function (e) {
+            e.preventDefault();
+            window.location.href = "produtos.html?produto=office";
+          });
+    
+          // Adicione manipuladores de clique para outros links conforme necessário
+        });
+      </script>
+      
    </body>
 </html>

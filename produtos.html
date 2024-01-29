@@ -11,195 +11,737 @@
       <link rel="stylesheet" href="assets/css/styles.css">
 
       <title>Responsive dropdown menu - Bedimcode</title>
+
+      <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <script>
+          $(document).ready(function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const produtoParam = urlParams.get('produto');
+        
+            if (produtoParam) {
+              // Esconde todas as divs-produto
+              $(".div-produto").css("display", "none");
+        
+              // Exibe a div correspondente ao parâmetro 'produto' na URL
+              $("#" + produtoParam + "-produto").css("display", "block");
+            }
+          });
+        </script>
+        
    </head>
    <body>
       <!--=============== HEADER ===============-->
       <header class="header">
-         <nav class="nav container">
-           <div class="nav__data">
-             <a href="#" class="nav__logo">
-               <img src="assets/img/logo-avanco.png" alt="">
-             </a>
-     
-           </div>
-     
-           <!--=============== NAV MENU ===============-->
-           <div class="nav__menu" id="nav-menu">
-             <ul class="nav__list">
-               <li><a href="index.html" class="nav__link">Home</a></li>
-     
-               <li><a href="about.html" class="nav__link">Quem somos</a></li>
-     
-               <!--=============== DROPDOWN 1 ===============-->
-               <li class="dropdown__item">
-                 <div class="nav__link">
-                   <a href="produtos.html">Soluções Acústicas <i class="ri-arrow-down-s-line dropdown__arrow"></i></a>
-                 </div>
-     
-                 <ul class="dropdown__menu">
-                   <li>
-                     <a href="#" class="dropdown__link">
-                       Ecoslim - Baffle
-                     </a>
-                   </li>
-                   <li>
-                     <a href="#" class="dropdown__link">
-                       Ecoslim - Módulo de Baffle
-                     </a>
-                   </li>
-                   <li>
-                     <a href="#" class="dropdown__link">
-                       Ecoslim - Nuvem
-                     </a>
-                   </li>
-                   <li>
-                     <a href="#" class="dropdown__link">
-                       Ecoslim - Divisória Cobogó
-                     </a>
-                   </li>
-                   <li>
-                     <a href="#" class="dropdown__link">
-                       Ecoslim - Painéis
-                     </a>
-                   </li>
-                   <li>
-                     <a href="#" class="dropdown__link">
-                       Ecoslim - Biombos
-                     </a>
-                   </li>
-                   <li>
-                     <a href="#" class="dropdown__link">
-                       Ecoslim - Office
-                     </a>
-                   </li>
-                   <li>
-                     <a href="#" class="dropdown__link">
-                       Nuvem Sonic
-                     </a>
-                   </li>
-     
-                   <li>
-                     <a href="#" class="dropdown__link">
-                       Baffles Nett
-                     </a>
-                   </li>
-     
-                   <li>
-                     <a href="#" class="dropdown__link">
-                       Revestimento Innovatech
-                     </a>
-                   </li>
-     
-     
-                 </ul>
-               </li>
-     
-               <li><a href="servicos.html" class="nav__link">Serviços</a></li>
-     
-               <li><a href="ctalogo.html" class="nav__link">Catálogo</a></li>
-     
-               <li><a href="contato.html" class="nav__link">Contato</a></li>
-             </ul>
-           </div>
-     
-           <div class="nav__icons">
-             <i class="ri-search-line nav__search" id="search-btn"></i>
-             <i class="ri-user-line nav__login" id="login-btn"></i>
-     
-             <div class="nav__toggle" id="nav-toggle">
-               <i class="ri-menu-line nav__burger"></i>
-               <i class="ri-close-line nav__close"></i>
+        <nav class="nav container">
+          <div class="nav__data">
+            <a href="index.html" class="nav__logo">
+              <img src="assets/img/logo-avanco.png" alt="">
+            </a>
+    
+          </div>
+    
+          <!--=============== NAV MENU ===============-->
+          <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+              <li><a href="index.html" class="nav__link">Home</a></li>
+    
+              <li><a href="about.html" class="nav__link">Quem somos</a></li>
+    
+              <!--=============== DROPDOWN 1 ===============-->
+              <li class="dropdown__item">
+                <div class="nav__link">
+                  <a class="solucoes" href="produtos.html">Soluções Acústicas <i class="ri-arrow-down-s-line dropdown__arrow"></i></a>
+                </div>
+    
+                <ul class="dropdown__menu">
+                  <li>
+                    <a href="#desc-grid" class="dropdown__link" id="ecoslim-grid-link">
+                      Ecoslim - Grid
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#desc-modulo-baffle" class="dropdown__link" id="ecoslim-modulo-baffle-link">
+                      Ecoslim - Módulo de Baffle
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown__link" id="ecoslim-baffle-link">
+                      Ecoslim - Baffle
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown__link" id="ecoslim-nuvem-link">
+                      Ecoslim - Nuvem
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown__link" id="ecoslim-divisoria-link">
+                      Ecoslim - Divisória Cobogó
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown__link" id="ecoslim-painel-link">
+                      Ecoslim - Painéis
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown__link" id="ecoslim-biombo-link">
+                      Ecoslim - Biombos
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown__link" id="ecoslim-office-link">
+                      Ecoslim - Office
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown__link" id="ecoslim-classica-link">
+                     Linha Clássica
+                    </a>
+                  </li>
+    
+    
+                </ul>
+              </li>
+    
+              <li><a href="servicos.html" class="nav__link">Serviços</a></li>
+    
+              <li><a href="ctalogo.html" class="nav__link">Catálogo</a></li>
+    
+              <li><a href="contato.html" class="nav__link">Contato</a></li>
+            </ul>
+          </div>
+    
+          <div class="nav__icons">
+            <a href="login1.html"><i class="ri-user-line nav__login" id="login-btn"></i></a>
+    
+            <div class="nav__toggle" id="nav-toggle">
+              <i class="ri-menu-line nav__burger"></i>
+              <i class="ri-close-line nav__close"></i>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+       <div class="container-conteudo-produtos">
+        <div class="lista-produtos">
+            <div class="todos-produtos">
+                <ul>
+                 <li><a id="todos-link" href="#" data-target="mostra-todos">Todos os Produtos</a></li>
+                 <li><a id="grid-link" href="#" data-target="grid">Grids Acústicos</a></li>
+                 <li><a id="baffle-link" href="#" data-target="modulo-baffle">Módulo de Baffle</a></li>
+                 <li><a id="modulo-link" href="#" data-target="baffle">Baffle</a></li>
+                 <li><a id="nuvem-link" href="#" data-target="nuvem">Nuvem</a></li>
+                 <li><a id="painel-link" href="#" data-target="painel">Paineis de Parede</a></li>
+                 <li><a id="divisoria-link" href="#" data-target="divisoria">Divisória Cobogó</a></li>
+                 <li><a id="biombo-link" href="#" data-target="biombo">Biombo Acústico</a></li>
+                 <li><a id="office-link" href="#" data-target="office">Office</a></li>
+                 <li><a id="classica-link" href="#" data-target="classica">Linha Clássica</a></li>
+
+                </ul>
+            </div>
+        </div>
+    
+        <div class="mostra-produtos" id="mostra-todos">
+            <h3>Produtos</h3>
+        <div class="div-produto" id="grid-produto">
+            <div class="descr-prod" id="desc-grid">
+              <h4>Grid</h4>
+              <p>
+                Os Grids foram desenvolvidos com um intuito de proporcionar projetos cada vez mais modernos, 
+                sofisticados e únicos.
+                O Modulo de Grid é um produto compacto e versátil, projetado com a finalidade de integrar
+                 qualidade sonora e design.
+              </p>
+            </div>
+           <div class="divisao-produtos" id="grid">
+             <div class="produto">
+               <a href="product-text-capela.html"><img src="assets/img/capela-1.png" alt="" class="img-prod"></a>
+               <a href="product-text-capela.html"><img src="assets/img/capela-2.png" alt="" class="img-prod-hover"></a>
+               <h4>Capela</h4>
+               <p>Ecoslim | Grid</p>
+             </div>
+             <div class="produto">
+               <a href="product-text-malha.html"><img src="assets/img/malha-1.png" alt="" class="img-prod"></a>
+               <a href="product-text-malha.html"><img src="assets/img/malha-2.png" alt="" class="img-prod-hover"></a>
+               <h4>Malha</h4>
+               <p>Ecoslim | Grid</p>                
+             </div>
+             <div class="produto">
+               <a href="product-text-pixel.html"><img src="assets/img/pixel-1.png" alt="" class="img-prod"></a>
+               <a href="product-text-pixel.html"><img src="assets/img/pixel-2.png" alt="" class="img-prod-hover"></a>
+               <h4>Pixel</h4>
+               <p>Ecoslim | Grid</p>
+             </div>
+             <div class="produto">
+               <a href="product-text-pergola.html"><img src="assets/img/pergola-1.png" alt="" class="img-prod"></a>
+               <a href="product-text-pergola.html"><img src="assets/img/pergola-2.png" alt="" class="img-prod-hover"></a>
+               <h4>Pérgola</h4>
+               <p>Ecoslim | Grid</p>
+             </div>
+             <div class="produto">
+               <a href="product-text-cyber.html"><img src="assets/img/cyber-1.png" alt="" class="img-prod"></a>
+               <a href="product-text-cyber.html"><img src="assets/img/cyber-2.png" alt="" class="img-prod-hover"></a>
+               <h4>Cyber</h4>
+               <p>Ecoslim | Grid</p>
+             </div>
+             <div class="produto">
+               <a href="product-text-window.html"><img src="assets/img/window-1.png" alt="" class="img-prod"></a>
+               <a href="product-text-window.html"><img src="assets/img/window-2.png" alt="" class="img-prod-hover"></a>
+               <h4>Windows</h4>
+               <p>Ecoslim | Grid</p>
+             </div>
+             <div class="produto">
+               <a href="product-text-celest.html"><img src="assets/img/celest-1.png" alt="" class="img-prod"></a>  
+               <a href="product-text-celest.html"><img src="assets/img/celest-2.png" alt="" class="img-prod-hover"></a>                     
+               <h4>Celest</h4>
+               <p>Ecoslim | Grid</p>
+             </div>
+             <div class="produto">
+               <a href="product-text-onda.html"><img src="assets/img/onda-1.png" alt="" class="img-prod"></a> 
+               <a href="product-text-onda.html"><img src="assets/img/onda-2.png" alt="" class="img-prod-hover"></a>                        
+               <h4>Onda</h4>
+               <p>Ecoslim | Grid</p>
+             </div>
+             <div class="produto">
+               <a href="product-text-kengokuma.html"><img src="assets/img/kengo-1.png" alt="" class="img-prod"></a> 
+               <a href="product-text-kengokuma.html"><img src="assets/img/kengo-2.png" alt="" class="img-prod-hover"></a>                        
+               <h4>Kengo-Kuma</h4>
+               <p>Ecoslim | Grid</p>
+             </div>
+             <div class="produto">
+               <a href="product-text-muxarabi.html"><img src="assets/img/muxa-1.png" alt="" class="img-prod"></a> 
+               <a href="product-text-muxarabi.html"><img src="assets/img/muxa-2.png" alt="" class="img-prod-hover"></a>                        
+               <h4>Muxarabi</h4>
+               <p>Ecoslim | Grid</p>
+             </div>
+             <div class="produto">
+               <a href="product-text-taipa.html"><img src="assets/img/taipa-1.png" alt="" class="img-prod"></a> 
+               <a href="product-text-taipa.html"><img src="assets/img/taipa-2.png" alt="" class="img-prod-hover"></a>                        
+               <h4>Taipa</h4>
+               <p>Ecoslim | Grid</p>
              </div>
            </div>
-         </nav>
-       </header>
-
-      <div class="container-conteudo-produtos">
-         <div class="lista-produtos">
-             <div class="todos-produtos">
-                 <ul>
-                     <li><a href="#">Todos os Produtos</a></li>
-                     <li><a href="#">Grids Acústicos</a></li>
-                     <li><a href="#">Baffle</a></li>
-                     <li><a href="#">Módulo de Baffle</a></li>
-                     <li><a href="#">Nuvem</a></li>
-                     <li><a href="#">Paineis de Parede</a></li>
-                     <li><a href="#">Divisória Cobogó</a></li>
-                     <li><a href="#">Baffle - Linha Classica</a></li>
-                     <li><a href="#">Nuvem - Linha Classica</a></li>
-                     <li><a href="#">Baffles - Linha Classica</a></li>
-     
-                 </ul>
+        </div>
+        <div class="div-produto" id="modulo-baffle-produto">
+           <div class="descr-prod" id="desc-modulo-baffle">
+            <h4>Módulo de Baffle</h4>
+            <p>
+              Os módulos de Baffle tem a estética e a funcionalidade como sua principal característica, 
+              contendo em seu portfólio modelos pensados e criados para atender aos mais variados estilos 
+              de projetos arquitetônicos.
+            </p>
+          </div>
+           <div class="divisao-produtos" id="modulo-baffle">
+             <div class="produto">
+               <a href="product-text-linha.html"><img src="assets/img/linha-1.png" alt="" class="img-prod"></a> 
+               <a href="product-text-linha.html"><img src="assets/img/linha-2.png" alt="" class="img-prod-hover"></a>                        
+               <h4>Linha</h4>
+               <p>Ecoslim | Módulo de Baffle</p>
              </div>
-         </div>
-     
-         <div class="mostra-produtos">
-             <h3>Produtos</h3>
-             <p>Descrição dos produtos</p>
-             <div class="divisao-produtos">
-                     <div class="produto">
-                         <a href=""><img src="assets/img/capela-1.png" alt="" class="img-prod"></a>
-                         <a href=""><img src="assets/img/capela-2.png" alt="" class="img-prod-hover"></a>
-                         <h4>Capela</h4>
-                         <p>Ecoslim | Grid</p>
-                     </div>
-                     <div class="produto">
-                         <a href=""><img src="assets/img/sine3.png" alt="" class="img-prod"></a>
-                         <h4>Malha</h4>
-                         <p>Ecoslim | Grid</p>                
-                     </div>
-                     <div class="produto">
-                         <a href=""><img src="assets/img/sine3.png" alt="" class="img-prod"></a>
-                         <h4>Pixel</h4>
-                         <p>Ecoslim | Grid</p>
-                     </div>
-                     <div class="produto">
-                         <a href=""><img src="assets/img/sine3.png" alt="" class="img-prod"></a>
-                         <h4>Pérgola</h4>
-                         <p>Ecoslim | Grid</p>
-                     </div>
-                     <div class="produto">
-                         <a href=""><img src="assets/img/sine3.png" alt="" class="img-prod"></a>
-                         <h4>Cyber</h4>
-                         <p>Ecoslim | Grid</p>
-                     </div>
-                     <div class="produto">
-                         <a href=""><img src="assets/img/sine3.png" alt="" class="img-prod"></a>
-                         <h4>Windows</h4>
-                         <p>Ecoslim | Grid</p>
-                     </div>
-                    <div class="produto">
-                      <a href=""><img src="assets/img/sine3.png" alt="" class="img-prod"></a>
-                      <h4>Celest</h4>
-                      <p>Ecoslim | Grid</p>
-                    </div>
-                    <div class="produto">
-                      <a href=""><img src="assets/img/sine3.png" alt="" class="img-prod"></a>
-                      <h4>Ondas</h4>
-                      <p>Ecoslim | Grid</p>
-                  </div>
-                  <div class="produto">
-                    <a href=""><img src="assets/img/sine3.png" alt="" class="img-prod"></a>
-                    <h4>Kegon-Kuma</h4>
-                    <p>Ecoslim | Grid</p>
-                  </div>
-                  <div class="produto">
-                    <a href=""><img src="assets/img/sine3.png" alt="" class="img-prod"></a>
-                    <h4>Muxarabi</h4>
-                    <p>Ecoslim | Grid</p>
-                  </div>
-                  <div class="produto">
-                      <a href=""><img src="assets/img/sine3.png" alt="" class="img-prod"></a>
-                      <h4>Taipa</h4>
-                      <p>Ecoslim | Grid</p>
-                  </div>
-                
-                 </div>
-         </div>
-      </div>
+             <div class="produto">
+               <a href="product-text-mar.html"><img src="assets/img/mar-1.png" alt="" class="img-prod"></a> 
+               <a href="product-text-mar.html"><img src="assets/img/mar-2.png" alt="" class="img-prod-hover"></a>                        
+               <h4>Mar</h4>
+               <p>Ecoslim | Módulo de Baffle</p>
+             </div>
+             <div class="produto">
+               <a href="product-text-urbano.html"><img src="assets/img/urbano-1.png" alt="" class="img-prod"></a> 
+               <a href="product-text-urbano.html"><img src="assets/img/urbano-2.png" alt="" class="img-prod-hover"></a>                        
+               <h4>Urbano</h4>
+               <p>Ecoslim | Módulo de Baffle</p>
+             </div>
+             <div class="produto">
+               <a href="product-text-briza.html"><img src="assets/img/briza-1.png" alt="" class="img-prod"></a> 
+               <a href="product-text-briza.html"><img src="assets/img/briza-2.png" alt="" class="img-prod-hover"></a>                        
+               <h4>Briza</h4>
+               <p>Ecoslim | Módulo de Baffle</p>
+             </div>
+             <div class="produto">
+               <a href="product-text-dunas.html"><img src="assets/img/dunas-1.png" alt="" class="img-prod"></a> 
+               <a href="product-text-dunas.html"><img src="assets/img/dunas-2.png" alt="" class="img-prod-hover"></a>                        
+               <h4>Dunas</h4>
+               <p>Ecoslim | Módulo de Baffle</p>
+             </div>
+             <div class="produto">
+               <a href="product-text-espinha.html"><img src="assets/img/espinha-1.png" alt="" class="img-prod"></a> 
+               <a href="product-text-espinha.html"><img src="assets/img/espinha-2.png" alt="" class="img-prod-hover"></a>                        
+               <h4>Espinha</h4>
+               <p>Ecoslim | Módulo de Baffle</p>
+             </div>
+             <div class="produto">
+               <a href="product-text-nave.html"><img src="assets/img/nave-1.png" alt="" class="img-prod"></a> 
+               <a href="product-text-nave.html"><img src="assets/img/nave-2.png" alt="" class="img-prod-hover"></a>                        
+               <h4>Nave</h4>
+               <p>Ecoslim | Módulo de Baffle</p>
+             </div>
+             <div class="produto">
+               <a href="product-text-piramide.html"><img src="assets/img/piramide-1.png" alt="" class="img-prod"></a> 
+               <a href="product-text-piramide.html"><img src="assets/img/piramide-2.png" alt="" class="img-prod-hover"></a>                        
+               <h4>Pirâmide</h4>
+               <p>Ecoslim | Módulo de Baffle</p>
+             </div>
+             <div class="produto">
+               <a href="prod"><img src="assets/img/saturno-1.png" alt="" class="img-prod"></a> 
+               <a href=""><img src="assets/img/saturno-2.png" alt="" class="img-prod-hover"></a>                        
+               <h4>Saturno</h4>
+               <p>Ecoslim | 
+                 Módulo de Baffle</p>
+             </div>
+             <div class="produto">
+               <a href=""><img src="assets/img/estacao-1.png" alt="" class="img-prod"></a> 
+               <a href=""><img src="assets/img/estacao-2.png" alt="" class="img-prod-hover"></a>                        
+               <h4>Estação</h4>
+               <p>Ecoslim | Módulo de Baffle</p>
+             </div>
+             <div class="produto">
+               <a href=""><img src="assets/img/concha-1.png" alt="" class="img-prod"></a> 
+               <a href=""><img src="assets/img/concha-2.png" alt="" class="img-prod-hover"></a>                        
+               <h4>Concha</h4>
+               <p>Ecoslim | Módulo de Baffle</p>
+             </div>
+           </div>
+        </div>
+        <div class="div-produto" id="baffle-produto">
+           <div class="descr-prod" id="desc-baffle">
+            <h4>Baffle</h4>
+            <p>
+            Os Baffles Ecoslim destacam-se por aprimorar tanto 
+            a estética quanto a funcionalidade, apresentando em seu portfólio uma diversidade de modelos 
+            meticulosamente projetados para atender a uma ampla gama de estilos arquitetônicos. 
+            </p>
+          </div>
+           <div class="divisao-produtos" id="baffle">
+             <div class="produto">
+               <a href=""><img src="assets/img/baffle-1.png" alt="" class="img-prod"></a>
+               <a href=""><img src="assets/img/baffle-2.png" alt="" class="img-prod-hover"></a>
+               <h4>Baffle</h4>
+               <p>Ecoslim | Baffle</p>
+             </div>
+           </div>
+        </div>
+        <div class="div-produto" id="nuvem-produto">
+           <div class="descr-prod" id="desc-nuvem">
+            <h4>Nuvem</h4>
+            <p>
+              As Nuvens Ecoslim concebida para ser uma solução acústica altamente eficiente, ideal 
+              em ambientes confinados como 
+              escritórios, edifícios públicos, espaços dedicados ao ensino, salas polivalentes, áreas de 
+              estudo , atividades comerciais e restaurantes.
+            </p>
+          </div>
+           <div class="divisao-produtos" id="nuvem">
+             <div class="produto">
+               <a href="product-text-nuvensret.html"><img src="assets/img/nuvemret-1.png" alt="" class="img-prod"></a>
+               <a href="product-text-nuvensret.html"><img src="assets/img/nuvemret-2.png" alt="" class="img-prod-hover"></a>
+               <h4>Nuvem Retangular</h4>
+               <p>Ecoslim | Nuvem</p>
+             </div>
+             <div class="produto">
+               <a href="product-text-nuvenscirc.html"><img src="assets/img/nuvemcirc-1.png" alt="" class="img-prod"></a>
+               <a href="product-text-nuvenscirc.html"><img src="assets/img/nuvemcirc-2.png" alt="" class="img-prod-hover"></a>
+               <h4>Nuvem Circular</h4>
+               <p>Ecoslim | Nuvem</p>
+             </div>
+             <div class="produto">
+               <a href="product-text-nuvenstri.html"><img src="assets/img/nuvemtri-1.png" alt="" class="img-prod"></a>
+               <a href="product-text-nuvenstri.html"><img src="assets/img/nuvemtri-2.png" alt="" class="img-prod-hover"></a>
+               <h4>Nuvem Triangular</h4>
+               <p>Ecoslim | Nuvem</p>
+             </div>
+             <div class="produto">
+               <a href="product-text-nuvenshex.html"><img src="assets/img/nuvemhex-1.png" alt="" class="img-prod"></a>
+               <a href="product-text-nuvenshex.html"><img src="assets/img/nuvemhex-2.png" alt="" class="img-prod-hover"></a>
+               <h4>Nuvem Hexagonal</h4>
+               <p>Ecoslim | Nuvem</p>
+             </div>
+             <div class="produto">
+               <a href="product-text-nuvensseixo.html"><img src="assets/img/nuvemsei-1.png" alt="" class="img-prod"></a>
+               <a href="product-text-nuvensseixo.html"><img src="assets/img/nuvemsei-2.png" alt="" class="img-prod-hover"></a>
+               <h4>Nuvem Seixo</h4>
+               <p>Ecoslim | Nuvem</p>
+             </div>
+           </div>
+          </div>
+          <div class="div-produto" id="painel-produto">
+           <div class="descr-prod" id="desc-painel">
+            <h4>Painéis de Parede</h4>
+            <p>
+              Painel fono-absorvente, concebido para ser instalado colado no teto ou na parede, ou até mesmo
+               suspenso através de
+              cabos ajustáveis. Disponível em 3 Linhas - Frieze, Tube e Patch ambos com uma solução acústica altamente
+              eficaz.
+            </p>
+          </div>
+           <div class="divisao-produtos" id="painel">
+             <div class="produto">
+               <a href="product-text-painelcurv.html"><img src="assets/img/curv-1.png" alt="" class="img-prod"></a>
+               <a href="product-text-painelcurv.html"><img src="assets/img/curv-2.png" alt="" class="img-prod-hover"></a>
+               <h4>Curv</h4>
+               <p>Ecoslim | Painel Frieze</p>
+             </div>
+             <div class="produto">
+               <a href="product-text-painelripa.html"><img src="assets/img/ripa-1.png" alt="" class="img-prod"></a>
+               <a href="product-text-painelripa.html"><img src="assets/img/ripa-2.png" alt="" class="img-prod-hover"></a>
+               <h4>Ripa</h4>
+               <p>Ecoslim | Painel Frieze</p>
+             </div>
+             <div class="produto">
+               <a href="product-text-painelorient.html"><img src="assets/img/orient-1.png" alt="" class="img-prod"></a>
+               <a href="product-text-painelorient.html"><img src="assets/img/orient-2.png" alt="" class="img-prod-hover"></a>
+               <h4>Orient</h4>
+               <p>Ecoslim | Painel Frieze</p>
+             </div>
+             <div class="produto">
+               <a href="product-text-painelgeometric.html"><img src="assets/img/geometric-1.png" alt="" class="img-prod"></a>
+               <a href="product-text-painelgeometric.html"><img src="assets/img/geometric-2.png" alt="" class="img-prod-hover"></a>
+               <h4>Geometric</h4>
+               <p>Ecoslim | Painel Frieze</p>
+             </div>
+             <div class="produto">
+               <a href="product-text-painelterra.html"><img src="assets/img/terra-1.png" alt="" class="img-prod"></a>
+               <a href="product-text-painelterra.html"><img src="assets/img/terra-2.png" alt="" class="img-prod-hover"></a>
+               <h4>Terra</h4>
+               <p>Ecoslim | Painel Frieze</p>
+             </div>
+             <div class="produto">
+               <a href="product-text-paineltub.html"><img src="assets/img/tub-1.png" alt="" class="img-prod"></a>
+               <a href="product-text-paineltub.html"><img src="assets/img/tub-2.png" alt="" class="img-prod-hover"></a>
+               <h4>Tube</h4>
+               <p>Ecoslim | Painel Tub</p>
+             </div>
+             <div class="produto">
+               <a href="product-text-painelpatch.html"><img src="assets/img/patch-1.png" alt="" class="img-prod"></a>
+               <a href="product-text-painelpatch.html"><img src="assets/img/patch-2.png" alt="" class="img-prod-hover"></a>
+               <h4>Patch</h4>
+               <p>Ecoslim | Painel Patch</p>
+             </div>
+           </div>
+          </div>
+          <div class="div-produto" id="divisoria-produto">
+           <div class="descr-prod" id="desc-divisoria">
+            <h4>Divisória Cobogó</h4>
+            <p>
+            Divisórias cobogó são soluções ideais para escritórios, estúdios e salas de reunião, 
+            oferecem equilíbrio entre estética contemporânea e controle de ruído, 
+            proporcionando ambientes versáteis e funcionais.
+            </p>
+          </div>
+           <div class="divisao-produtos" id="divisoria">
+             <div class="produto">
+               <a href="product-text-divisóriaurbano.html"><img src="assets/img/urbanoo-1.png" alt="" class="img-prod"></a>
+               <a href="product-text-divisóriaurbano.html"><img src="assets/img/urbanoo-2.png" alt="" class="img-prod-hover"></a>
+               <h4>Urbano</h4>
+               <p>Ecoslim | Painel Divisória Cobogó</p>
+             </div>
+             <div class="produto">
+               <a href="product-text-divisóriametropole.html"><img src="assets/img/metropole-1.png" alt="" class="img-prod"></a>
+               <a href="product-text-divisóriametropole.html"><img src="assets/img/metropole-2.png" alt="" class="img-prod-hover"></a>
+               <h4>Metrópole</h4>
+               <p>Ecoslim | Painel Divisória Cobogó</p>
+             </div>
+             <div class="produto">
+               <a href="product-text-divisóriaorient.html"><img src="assets/img/orientt-1.png" alt="" class="img-prod"></a>
+               <a href="product-text-divisóriaorient.html"><img src="assets/img/orientt-2.png" alt="" class="img-prod-hover"></a>
+               <h4>Orient</h4>
+               <p>Ecoslim | Painel Divisória Cobogó</p>
+             </div>
+             <div class="produto">
+               <a href="product-text-divisóriabotanic.html"><img src="assets/img/botanic-1.png" alt="" class="img-prod"></a>
+               <a href="product-text-divisóriabotanic.html"><img src="assets/img/botanic-2.png" alt="" class="img-prod-hover"></a>
+               <h4>Botanic</h4>
+               <p>Ecoslim | Painel Divisória Cobogó</p>
+             </div>
+             <div class="produto">
+               <a href="product-text-divisóriabobble.html"><img src="assets/img/booble-1.png" alt="" class="img-prod"></a>
+               <a href="product-text-divisóriabobble.html"><img src="assets/img/booble-2.png" alt="" class="img-prod-hover"></a>
+               <h4>Bobble</h4>
+               <p>Ecoslim | Painel Divisória Cobogó</p>
+             </div>
+           </div>
+          </div>
+          <div class="div-produto" id="biombo-produto">
+           <div class="descr-prod" id="desc-biombo">
+            <h4>Biombos Acústicos</h4>
+            <p>
+              Os biombos acústicos não apenas contribuem para a estética do ambiente, mas também 
+              desempenham um papel crucial na criação de zonas mais silenciosas e na redução do ruído 
+              indesejado, promovendo assim um ambiente mais produtivo e harmonioso.
+            </p>
+          </div>
+           <div class="divisao-produtos" id="biombo">
+             <div class="produto">
+               <a href="product-text-biombo.html"><img src="assets/img/classic-1.png" alt="" class="img-prod"></a>
+               <a href="product-text-biombo.html"><img src="assets/img/classic-2.png" alt="" class="img-prod-hover"></a>
+               <h4>Classic</h4>
+               <p>Ecoslim | Biombo Acústico</p>
+             </div>
+             <div class="produto">
+               <a href="product-text-biombo.html"><img src="assets/img/biomboterra-1.png" alt="" class="img-prod"></a>
+               <a href="product-text-biombo.html"><img src="assets/img/biomboterra-2.png" alt="" class="img-prod-hover"></a>
+               <h4>Terra</h4>
+               <p>Ecoslim | Biombo Acústico</p>
+             </div>
+             <div class="produto">
+               <a href="product-text-biombo.html"><img src="assets/img/biombocurv-1.png" alt="" class="img-prod"></a>
+               <a href="product-text-biombo.html"><img src="assets/img/biombocurv-2.png" alt="" class="img-prod-hover"></a>
+               <h4>Curv</h4>
+               <p>Ecoslim | Biombo Acústico</p>
+             </div>
+             <div class="produto">
+               <a href="product-text-biombo.html"><img src="assets/img/biomboripa-1.png" alt="" class="img-prod"></a>
+               <a href="product-text-biombo.html"><img src="assets/img/biomboripa-2.png" alt="" class="img-prod-hover"></a>
+               <h4>Ripa</h4>
+               <p>Ecoslim | Biombo Acústico</p>
+             </div>
+             <div class="produto">
+               <a href="product-text-biombo.html"><img src="assets/img/biombogeometric-1.png" alt="" class="img-prod"></a>
+               <a href="product-text-biombo.html"><img src="assets/img/biombogeometric-2.png" alt="" class="img-prod-hover"></a>
+               <h4>Geometric</h4>
+               <p>Ecoslim | Biombo Acústico</p>
+             </div>
+           </div>
+           </div>
+           <div class="div-produto" id="office-produto">
+           <div class="descr-prod" id="desc-office">
+            <h4>Office</h4>
+            <p>
+              A linha Office é focada na 
+              criação de zonas mais silenciosas e na redução do ruído indesejado, promovendo assim um ambiente 
+              mais produtivo e harmonioso.
+            </p>
+          </div>
+           <div class="divisao-produtos" id="office">
+             <div class="produto">
+               <a href="product-text-divisoriamesa.html"><img src="assets/img/divisor.png" alt="" class="img-prod-classic"></a>
+               <h4>Divisória de Mesa</h4>
+               <p>Ecoslim | Office</p>
+             </div>
+             <div class="produto">
+               <a href="product-text-phonebooth.html"><img src="assets/img/duo.png" alt="" class="img-prod-classic"></a>
+               <h4>Phonebooth</h4>
+               <p>Ecoslim | Office</p>
+             </div>
+             <div class="produto">
+               <a href="product-text-cabine.html"><img src="assets/img/cabinep-1.png" alt="" class="img-prod-classic"></a>
+               <h4>Cabine Acústica</h4>
+               <p>Ecoslim | Office</p>
+             </div>
+           </div>
+           </div>
+           <div class="div-produto" id="classica-produto">
+           <div class="descr-prod" id="desc-classica">
+            <h4>Linha Clássica</h4>
+            <p>
+              A linha clássica destaca-se pela excelência na fabricação de produtos que incorporam lã de PET 
+              com 50mm de espessura, proporcionando isolamento acústico eficaz. As nuvens e baffles, 
+              revestidos com tecido, oferecem não apenas desempenho acústico superior, mas também uma 
+              estética elegante. Além disso, os painéis Innovatech garantem soluções versáteis para aprimorar 
+              a qualidade sonora e o design de ambientes diversos.
+            </p>
+          </div>
+           <div class="divisao-produtos" id="classica">
+             <div class="produto">
+               <a href=""><img src="assets/img/baffle.jpg" alt="" class="img-prod-classic"></a> 
+               <h4>Baffle</h4>
+               <p>Linha Clássica</p>
+             </div>
+             <div class="produto">
+               <a href=""><img src="assets/img/nuvem.jpeg" alt="" class="img-prod-classic"></a> 
+               <h4>Nuvem</h4>
+               <p>Linha Clássica</p>
+             </div>
+             <div class="produto">
+               <a href=""><img src="assets/img/innovatech.jpg" alt="" class="img-prod-classic"></a> 
+               <h4>Painel Innovatech</h4>
+               <p>Linha Clássica</p>
+             </div>
+            </div>
+            </div>
 
-   
+        </div>
+     </div>
+
+    
+  
       <!--=============== MAIN JS ===============-->
       <script src="assets/js/main.js"></script>
+      
+   <!--   <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const todosLink = document.getElementById("todos-link");
+          const links = document.querySelectorAll(".todos-produtos ul li a");
+          const secoesProdutos = document.querySelectorAll(".mostra-produtos .divisao-produtos");
+        
+          // Exibir todas as seções inicialmente
+          secoesProdutos.forEach((secao) => {
+            secao.style.display = "grid";
+        
+            // Adicionar div acima de cada div.divisao-produtos com ID correspondente
+            const descricaoDiv = document.createElement("div");
+            descricaoDiv.id = "desc-" + secao.id;
+            secao.parentElement.insertBefore(descricaoDiv, secao);
+          });
+        
+          // Adicionar evento de clique para os links
+          links.forEach((link) => {
+            link.addEventListener("click", function (event) {
+              event.preventDefault();
+        
+              // Obter o valor do data-target do link clicado
+              const target = this.getAttribute("data-target");
+        
+              // Exibir tanto a div com o ID "desc-" + target quanto a div com o ID target
+              const descricaoCorrespondente = document.getElementById("desc-" + target);
+              if (descricaoCorrespondente) {
+                descricaoCorrespondente.style.display = "block";
+              }
+        
+              const secaoCorrespondente = document.getElementById(target);
+              if (secaoCorrespondente) {
+                secaoCorrespondente.style.display = "grid";
+              }
+        
+              // Ocultar todas as outras seções e divs de descrição
+              secoesProdutos.forEach((secao) => {
+                if (secao.id !== target) {
+                  secao.style.display = "none";
+                }
+        
+                const descricaoDiv = document.getElementById("desc-" + secao.id);
+                if (descricaoDiv && descricaoDiv.id !== "desc-" + target) {
+                  descricaoDiv.style.display = "none";
+                }
+              });
+        
+              // Remover a classe 'selected' de todos os links
+              links.forEach((link) => {
+                link.parentElement.classList.remove("selected");
+              });
+        
+              // Adicionar a classe 'selected' ao link clicado
+              this.parentElement.classList.add("selected");
+            });
+          });
+        
+          // Adicionar evento de clique para o link "Todos os Produtos"
+          todosLink.addEventListener("click", function (event) {
+            event.preventDefault();
+        
+            // Exibir todas as seções e divs de descrição novamente
+            secoesProdutos.forEach((secao) => {
+              secao.style.display = "grid";
+        
+              const descricaoDiv = document.getElementById("desc-" + secao.id);
+              if (descricaoDiv) {
+                descricaoDiv.style.display = "block";
+              }
+            });
+        
+            // Remover a classe 'selected' de todos os links
+            links.forEach((link) => {
+              link.parentElement.classList.remove("selected");
+            });
+          });
+        });
+
+
+
+
+        </script>
+      -->
+
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const todosLink = document.getElementById("todos-link");
+          const links = document.querySelectorAll(".todos-produtos ul li a");
+          const secoesProdutos = document.querySelectorAll(".mostra-produtos .divisao-produtos");
+      
+          // Função para obter o valor do parâmetro da URL
+          function obterParametroURL(nome) {
+            const parametros = new URLSearchParams(window.location.search);
+            return parametros.get(nome);
+          }
+      
+          // Função para exibir a seção correspondente ao parâmetro da URL ou todas as seções
+          function exibirSecao(correspondente) {
+            // Ocultar todas as seções de produtos
+            secoesProdutos.forEach((secao) => {
+              secao.style.display = "none";
+            });
+      
+            // Exibir a seção correspondente ou todas as seções se não houver correspondência
+            if (correspondente) {
+              correspondente.style.display = "grid";
+      
+              // Exibir a divisão correspondente
+              const divisaoCorrespondente = document.getElementById(correspondente.id.replace("-produto", ""));
+              if (divisaoCorrespondente) {
+                divisaoCorrespondente.style.display = "grid";
+              }
+      
+              // Ocultar todas as desc-prod
+              const descProds = document.querySelectorAll(".descr-prod");
+              descProds.forEach((descProd) => {
+                descProd.style.display = "none";
+              });
+      
+              // Exibir apenas a desc-prod correspondente dentro da div-produto
+              const descCorrespondente = correspondente.querySelector(".descr-prod");
+              if (descCorrespondente) {
+                descCorrespondente.style.display = "block";
+              }
+            } else {
+              secoesProdutos.forEach((secao) => {
+                secao.style.display = "grid";
+              });
+      
+              // Exibir todas as desc-prod se nenhum correspondente estiver ativo
+              const descProds = document.querySelectorAll(".descr-prod");
+              descProds.forEach((descProd) => {
+                descProd.style.display = "block";
+              });
+            }
+          }
+      
+          // Adicionar evento de clique para os links
+          links.forEach((link) => {
+            link.addEventListener("click", function (event) {
+              event.preventDefault();
+      
+              // Obter o valor do data-target do link clicado
+              const target = this.getAttribute("data-target");
+      
+              // Exibir a seção correspondente ao link clicado
+              const secaoCorrespondente = document.getElementById(target + "-produto");
+              exibirSecao(secaoCorrespondente);
+            });
+          });
+      
+          // Adicionar evento de clique para o link "Todos os Produtos"
+          todosLink.addEventListener("click", function (event) {
+            event.preventDefault();
+      
+            // Exibir todas as seções de produtos
+            exibirSecao(null);
+          });
+      
+          // Exibir a seção correspondente ao parâmetro da URL ao carregar a página
+          const parametroProduto = obterParametroURL("produto");
+          const secaoCorrespondente = document.getElementById(parametroProduto + "-produto");
+          exibirSecao(secaoCorrespondente);
+        });
+      </script>
+      
+      
+      
+      
+      
+      
+      
+      
+        
+     
+       
    </body>
 </html>

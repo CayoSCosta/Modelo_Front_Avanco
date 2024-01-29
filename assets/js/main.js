@@ -63,6 +63,12 @@ new Glider($simpleCarousel, {
           slidesToShow: 1,
         },
       },
+      {
+        breakpoint:240,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
 ]
 });
 

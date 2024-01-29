@@ -10,190 +10,105 @@
       <!--=============== CSS ===============-->
       <link rel="stylesheet" href="assets/css/styles.css">
 
+      <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+      
       <title>Responsive dropdown menu - Bedimcode</title>
    </head>
+   
    <body>
       <!--=============== HEADER ===============-->
       <header class="header">
-         <nav class="nav container">
-            <div class="nav__data">
-               <a href="#" class="nav__logo">
-                  <img src="assets/img/logo-avanco.png" alt="">
-               </a>
-            
-            </div>
-
-            <!--=============== NAV MENU ===============-->
-            <div class="nav__menu" id="nav-menu">
-               <ul class="nav__list">
-                  <li><a href="#" class="nav__link">Home</a></li>
-
-                  <li><a href="#" class="nav__link">Quem somos</a></li>
-
-                  <!--=============== DROPDOWN 1 ===============-->
-                  <li class="dropdown__item">
-                     <div class="nav__link">
-                        Soluções Acústicas <i class="ri-arrow-down-s-line dropdown__arrow"></i>
-                     </div>
-
-                     <ul class="dropdown__menu">
-                        <li>
-                           <a href="#" class="dropdown__link">
-                              <i class="ri-pie-chart-line"></i> Nuvem Sonic
-                           </a>                          
-                        </li>
-
-                        <li>
-                           <a href="#" class="dropdown__link">
-                              <i class="ri-arrow-up-down-line"></i>Baffles= Nett
-                           </a>
-                        </li>
-
-                        <li>
-                           <a href="#" class="dropdown__link">
-                              <i class="ri-arrow-up-down-line"></i>Revestimento Innovatech
-                           </a>
-                        </li>
-                        
-                        
-                     </ul>
+        <nav class="nav container">
+          <div class="nav__data">
+            <a href="index.html" class="nav__logo">
+              <img src="assets/img/logo-avanco.png" alt="">
+            </a>
+    
+          </div>
+    
+          <!--=============== NAV MENU ===============-->
+          <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+              <li><a href="index.html" class="nav__link">Home</a></li>
+    
+              <li><a href="about.html" class="nav__link">Quem somos</a></li>
+    
+              <!--=============== DROPDOWN 1 ===============-->
+              <li class="dropdown__item">
+                <div class="nav__link">
+                  <a class="solucoes" href="produtos.html">Soluções Acústicas <i class="ri-arrow-down-s-line dropdown__arrow"></i></a>
+                </div>
+    
+                <ul class="dropdown__menu">
+                  <li>
+                    <a href="#" class="dropdown__link" id="ecoslim-grid-link" data-target-produto="grid-produto">
+                      Ecoslim - Grid
+                    </a>
                   </li>
-                  
-                  <li><a href="#" class="nav__link">Serviços</a></li>
-
-                  <li><a href="#" class="nav__link">Catálogo</a></li>
-
-                  <li><a href="#" class="nav__link">Contato</a></li>
-               </ul>
+                  <li>
+                    <a href="#" class="dropdown__link" id="ecoslim-modulo-baffle-link">
+                      Ecoslim - Módulo de Baffle
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown__link" id="ecoslim-baffle-link">
+                      Ecoslim - Baffle
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown__link" id="ecoslim-nuvem-link">
+                      Ecoslim - Nuvem
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown__link" id="ecoslim-divisoria-link">
+                      Ecoslim - Divisória Cobogó
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown__link" id="ecoslim-painel-link">
+                      Ecoslim - Painéis
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown__link" id="ecoslim-biombo-link">
+                      Ecoslim - Biombos
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown__link" id="ecoslim-office-link">
+                      Ecoslim - Office
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown__link" id="ecoslim-classica-link">
+                     Linha Clássica
+                    </a>
+                  </li>
+    
+    
+                </ul>
+              </li>
+    
+              <li><a href="servicos.html" class="nav__link">Serviços</a></li>
+    
+              <li><a href="ctalogo.html" class="nav__link">Catálogo</a></li>
+    
+              <li><a href="contato.html" class="nav__link">Contato</a></li>
+            </ul>
+          </div>
+    
+          <div class="nav__icons">
+            <a href="login1.html"><i class="ri-user-line nav__login" id="login-btn"></i></a>
+    
+            <div class="nav__toggle" id="nav-toggle">
+              <i class="ri-menu-line nav__burger"></i>
+              <i class="ri-close-line nav__close"></i>
             </div>
-
-            <div class="nav__icons">
-               <i class="ri-search-line nav__search" id="search-btn"></i>
-               <i class="ri-user-line nav__login" id="login-btn"></i>
-
-               <div class="nav__toggle" id="nav-toggle">
-                  <i class="ri-menu-line nav__burger"></i>
-                  <i class="ri-close-line nav__close"></i>
-               </div>
-            </div>
-         </nav>
+          </div>
+        </nav>
       </header>
-
-      <!DOCTYPE html>
-   <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-      <!--=============== REMIXICONS ===============-->
-      <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
-
-      <!--=============== CSS ===============-->
-      <link rel="stylesheet" href="assets/css/styles.css">
-
-      <title>Responsive dropdown menu - Bedimcode</title>
-   </head>
-   <body>
-      <!--=============== HEADER ===============-->
-      <header class="header">
-         <nav class="nav container">
-           <div class="nav__data">
-             <a href="#" class="nav__logo">
-               <img src="assets/img/logo-avanco.png" alt="">
-             </a>
-     
-           </div>
-     
-           <!--=============== NAV MENU ===============-->
-           <div class="nav__menu" id="nav-menu">
-             <ul class="nav__list">
-               <li><a href="index.html" class="nav__link">Home</a></li>
-     
-               <li><a href="about.html" class="nav__link">Quem somos</a></li>
-     
-               <!--=============== DROPDOWN 1 ===============-->
-               <li class="dropdown__item">
-                 <div class="nav__link">
-                   <a href="produtos.html">Soluções Acústicas <i class="ri-arrow-down-s-line dropdown__arrow"></i></a>
-                 </div>
-     
-                 <ul class="dropdown__menu">
-                   <li>
-                     <a href="#" class="dropdown__link">
-                       Ecoslim - Baffle
-                     </a>
-                   </li>
-                   <li>
-                     <a href="#" class="dropdown__link">
-                       Ecoslim - Módulo de Baffle
-                     </a>
-                   </li>
-                   <li>
-                     <a href="#" class="dropdown__link">
-                       Ecoslim - Nuvem
-                     </a>
-                   </li>
-                   <li>
-                     <a href="#" class="dropdown__link">
-                       Ecoslim - Divisória Cobogó
-                     </a>
-                   </li>
-                   <li>
-                     <a href="#" class="dropdown__link">
-                       Ecoslim - Painéis
-                     </a>
-                   </li>
-                   <li>
-                     <a href="#" class="dropdown__link">
-                       Ecoslim - Biombos
-                     </a>
-                   </li>
-                   <li>
-                     <a href="#" class="dropdown__link">
-                       Ecoslim - Office
-                     </a>
-                   </li>
-                   <li>
-                     <a href="#" class="dropdown__link">
-                       Nuvem Sonic
-                     </a>
-                   </li>
-     
-                   <li>
-                     <a href="#" class="dropdown__link">
-                       Baffles Nett
-                     </a>
-                   </li>
-     
-                   <li>
-                     <a href="#" class="dropdown__link">
-                       Revestimento Innovatech
-                     </a>
-                   </li>
-     
-     
-                 </ul>
-               </li>
-     
-               <li><a href="servicos.html" class="nav__link">Serviços</a></li>
-     
-               <li><a href="ctalogo.html" class="nav__link">Catálogo</a></li>
-     
-               <li><a href="contato.html" class="nav__link">Contato</a></li>
-             </ul>
-           </div>
-     
-           <div class="nav__icons">
-             <i class="ri-search-line nav__search" id="search-btn"></i>
-             <i class="ri-user-line nav__login" id="login-btn"></i>
-     
-             <div class="nav__toggle" id="nav-toggle">
-               <i class="ri-menu-line nav__burger"></i>
-               <i class="ri-close-line nav__close"></i>
-             </div>
-           </div>
-         </nav>
-       </header>
+    
 
       <section class="main-services" id="">
         <div class="box-container-services">
@@ -204,7 +119,7 @@
 
                 </div>
                 <div class="img-flex">
-                    <img src="assets/img/d.png" alt="">
+                    <img src="assets/img/painel-arrow-1.png" alt="">
                 </div>
             </div>
         </div>
@@ -227,9 +142,118 @@
     </section>  
 
      
-    
+    <footer>
+      <div class="conteudo-footer">
+        <div class="footer-social">
+          <div>
+            <p>Novidades Avanço:</p>
+            <div class="email-field">
+              <input type="text" id="addemail" placeholder="Coloque seu email">
+              <label for="addemail" class="fa-solid fa-arrow-right"></label>
+            </div>
+          </div>
+          <div class="icon-social">
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+        </div>
+  
+        <div class="footer-links1">
+          <div class="ul-um">
+            <ul>
+              <li><a href="./index.php" class="nav_link">Home</a></li>
+              <li><a href="./solucoes.php" class="nav_link">Soluções Acústicas</a></li>
+              <li><a href="./servicos.php" class="nav_link">Serviços</a></li>
+              <li><a href="./catalogo.php" class="nav_link">Catálogo</a></li>
+  
+            </ul>
+          </div>
+  
+          <div class="ul-do">
+            <ul>
+              <li><a href="./about.php" class="nav_link">Quem Somos</a></li>
+              <li><a href="./contato.php" class="nav_link">Contato</a></li>
+              <li><a href="./sustentabilidade.php" class="nav_link">Sustentabilidade</a></li>
+            </ul>
+          </div>
+          <div class="ul-tr">
+            <ul>
+              <li><a href="tel:1131643610">(11) 3164-3610</a></li>
+              <li><a href="tel:1131643610">contato@avancoacustica.com.br</a></li>
+            </ul>
+          </div>
+        </div>
+  
+        <div class="footer-links2">
+            <ul>
+              <li><a href="./index.php" class="nav_link">Home</a></li>
+              <li><a href="./solucoes.php" class="nav_link">Soluções Acústicas</a></li>
+              <li><a href="./servicos.php" class="nav_link">Serviços</a></li>
+              <li><a href="./catalogo.php" class="nav_link">Catálogo</a></li>
+              <li><a href="./about.php" class="nav_link">Quem Somos</a></li>
+              <li><a href="./contato.php" class="nav_link">Contato</a></li>
+              <li><a href="./sustentabilidade.php" class="nav_link">Sustentabilidade</a></li>
+              <li><a href="tel:1131643610">(11) 3164-3610</a></li>
+              <li><a href="tel:1131643610">contato@avancoacustica.com.br</a></li>
+            </ul>
       
-
+      </div>
+  
+  
+    </footer>
+      
+    <script>
+      $(document).ready(function () {
+        $(".div-produto").css("display", "none");
+    
+        $("#ecoslim-grid-link").on("click", function (e) {
+          e.preventDefault();
+          window.location.href = "produtos.html?produto=grid";
+        });
+    
+        $("#ecoslim-modulo-baffle-link").on("click", function (e) {
+          e.preventDefault();
+          window.location.href = "produtos.html?produto=modulo-baffle";
+        });
+  
+        $("#ecoslim-baffle-link").on("click", function (e) {
+          e.preventDefault();
+          window.location.href = "produtos.html?produto=baffle";
+        });
+    
+        $("#ecoslim-nuvem-link").on("click", function (e) {
+          e.preventDefault();
+          window.location.href = "produtos.html?produto=nuvem";
+        });
+    
+        $("#ecoslim-divisoria-link").on("click", function (e) {
+          e.preventDefault();
+          window.location.href = "produtos.html?produto=divisoria";
+        });
+  
+        $("#ecoslim-painel-link").on("click", function (e) {
+          e.preventDefault();
+          window.location.href = "produtos.html?produto=painel";
+        });
+  
+        $("#ecoslim-biombo-link").on("click", function (e) {
+          e.preventDefault();
+          window.location.href = "produtos.html?produto=biombo";
+        });
+  
+        $("#ecoslim-classica-link").on("click", function (e) {
+          e.preventDefault();
+          window.location.href = "produtos.html?produto=classica";
+        });
+  
+        $("#ecoslim-office-link").on("click", function (e) {
+          e.preventDefault();
+          window.location.href = "produtos.html?produto=office";
+        });
+  
+        // Adicione manipuladores de clique para outros links conforme necessário
+      });
+    </script>
    
       <!--=============== MAIN JS ===============-->
       <script src="assets/js/main.js"></script>
@@ -237,7 +261,4 @@
 </html>
 
    
-      <!--=============== MAIN JS ===============-->
-      <script src="assets/js/main.js"></script>
-   </body>
-</html>
+     
