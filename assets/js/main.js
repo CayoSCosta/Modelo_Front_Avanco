@@ -23,7 +23,7 @@ const $simpleCarousel = document.querySelector(".js-carousel--simple");
 new Glider($simpleCarousel, {
   slidesToShow: 5,
   slidesToScroll: 1,
-  draggable: true,
+  draggable: false,
   dots: ".js-carousel--simple-dots",
   arrows: {
     prev: ".js-carousel--simple-prev",
@@ -52,7 +52,7 @@ new Glider($simpleCarousel, {
       },
     },
       {
-        breakpoint:425,
+        breakpoint:370,
         settings: {
           slidesToShow: 2,
         },

@@ -1,0 +1,667 @@
+<!--DOCTYPE html-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--==Title============================-->
+    <title>Product Page HTML</title>
+
+    <!--=============== REMIXICONS ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    
+    <!--==CSS==============================-->
+    <link rel="stylesheet" href="../css/styles.css"/>
+    
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <style>
+      .swiper-wrapper {
+          height: 600px; 
+      }
+      footer{
+        margin-top: -100px;
+      }
+
+      @media screen and (max-width: 768px) {
+        .swiper-wrapper {
+          height: 300px; /* Altura para telas menores (por exemplo, tablets) */
+          }
+          footer{
+            margin-top: -300px;
+          }
+    
+      }
+
+      @media screen and (max-width: 576px) {
+        .swiper-wrapper {
+          height: 300px; /* Altura para telas pequenas (por exemplo, smartphones) */
+        }
+      }
+      @media screen and (max-width: 425px) {
+    
+        footer{
+        margin-top: -100px;
+      }
+      
+      }
+
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <nav class="nav container">
+      <div class="nav__data">
+        <a href="index.html" class="nav__logo">
+          <img src="../img/logo-avanco.png" alt="">
+        </a>
+
+      </div>
+
+      <!--=============== NAV MENU ===============-->
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <li><a href="../../index.html" class="nav__link">Home</a></li>
+
+          <li><a href="../../about.html" class="nav__link">Quem somos</a></li>
+
+          <!--=============== DROPDOWN 1 ===============-->
+          <li class="dropdown__item">
+            <div class="nav__link">
+              <a class="solucoes" href="../../produtos.html">Soluções Acústicas <i class="ri-arrow-down-s-line dropdown__arrow"></i></a>
+            </div>
+
+            <ul class="dropdown__menu">
+              <li>
+                <a href="#" class="dropdown__link" id="ecoslim-grid-link" data-target-produto="grid-produto">
+                  Ecoslim - Grid
+                </a>
+              </li>
+              <li>
+                <a href="#" class="dropdown__link" id="ecoslim-modulo-baffle-link">
+                  Ecoslim - Módulo de Baffle
+                </a>
+              </li>
+              <li>
+                <a href="#" class="dropdown__link" id="ecoslim-baffle-link">
+                  Ecoslim - Baffle
+                </a>
+              </li>
+              <li>
+                <a href="#" class="dropdown__link" id="ecoslim-nuvem-link">
+                  Ecoslim - Nuvem
+                </a>
+              </li>
+              <li>
+                <a href="#" class="dropdown__link" id="ecoslim-divisoria-link">
+                  Ecoslim - Divisória Cobogó
+                </a>
+              </li>
+              <li>
+                <a href="#" class="dropdown__link" id="ecoslim-painel-link">
+                  Ecoslim - Painéis
+                </a>
+              </li>
+              <li>
+                <a href="#" class="dropdown__link" id="ecoslim-biombo-link">
+                  Ecoslim - Biombos
+                </a>
+              </li>
+              <li>
+                <a href="#" class="dropdown__link" id="ecoslim-office-link">
+                  Ecoslim - Office
+                </a>
+              </li>
+              <li>
+                <a href="#" class="dropdown__link" id="ecoslim-classica-link">
+                 Linha Clássica
+                </a>
+              </li>
+
+
+            </ul>
+          </li>
+
+          <li><a href="../../servicos.html" class="nav__link">Serviços</a></li>
+
+          <li><a href="../../ctalogo.html" class="nav__link">Catálogo</a></li>
+
+          <li><a href="../../contato.html" class="nav__link">Contato</a></li>
+        </ul>
+      </div>
+
+      <div class="nav__icons">
+        <a href="../../login1.html"><i class="ri-user-line nav__login" id="login-btn"></i></a>
+
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="ri-menu-line nav__burger"></i>
+          <i class="ri-close-line nav__close"></i>
+        </div>
+      </div>
+    </nav>
+  </header>
+      
+    <!--==Product-Page=================================-->
+    <section class="product-page">
+    <div class="product-details">
+        <!--**Img*************************-->
+        <div class="product-img">
+          <img src="../img/pergola-1.png" alt="">
+        <!-- Swiper Slider -->
+         <!--   <div class="swiper" id="swiper-1">
+                <div class="swiper-wrapper">
+                
+                
+                  <div class="swiper-slide">
+                      <img src="../img/capela-prod-1.png" />
+                  </div>
+                
+                  <div class="swiper-slide">
+                      <img src="../img/capela-2.png" />
+                  </div>
+                  
+                  </div>
+
+                  <div class="slider-btns">
+                      <div class="swiper-button-prev"></div>
+                      <div class="swiper-button-next"></div>
+                  </div>
+                </div>
+
+        </div> -->
+
+        </div>
+
+        <div class="product-text">
+            <!--category-->
+            <span class="product-category">EcoSlim | Grid</span>
+            <h3>Pérgola</h3>
+            <p>
+              Os módulos Pérgola criam um design linear no seu ambiente com painéis perpendiculares perfeitamente espaçados. Os módulos não só proporcionam um visual elegante com sua disposição linear e painéis perpendiculares, mas também oferecem versatilidade na aplicação. Ao conectar os módulos, é possível criar uma continuidade visual em corredores longos, promovendo uma estética contínua e fluida. 
+                <br/>
+                <br>
+                Ao optar pelos módulos acústicos Pérgola, você não apenas investe em estética e funcionalidade, mas também contribui para a criação de espaços harmoniosos e ecologicamente conscientes.
+            </p>
+
+
+            <!--btn-->
+            <div class="product-button">
+                <a href="#" class="add-wishlist-btn">Download do Catálogo</a>
+            </div>
+
+            <!--help-btn-->
+            <a href="#" class="help-btn">Peça seu orçamento</a>
+
+            <div class="expansivel">
+              <div class="expansivel-controle">
+                <div class="titulo-expansivel" onclick="toggleContent()">
+                  <h3>Especificações</h3>
+                  <span id="icone" class="seta">&#9654;</span>
+                </div>
+                <div class="conteudo" id="conteudo">
+                  <div class="conteudo-expansivel">
+                    <h5>Material</h5>
+                    <p>100% Lã de PET</p>
+                    <p>80% de fibra PET reciclada e 20% de fibra virgem</p>
+                  </div>
+                  <div class="conteudo-expansivel">
+                    <h5>Espessura</h5>
+                    <p>9mm</p>
+                  </div>
+                  <div class="conteudo-expansivel">
+                    <h5>Dimensões</h5>
+                    <p>2,40m x 2,40m</p>
+                  </div>
+                  <div class="conteudo-expansivel">
+                    <h5>Densidade</h5>
+                    <p>217kg/m³</p>
+                  </div>
+                  <!--<div class="conteudo-expansivel">
+                    <h5>Peso</h5>
+                    <p>5,19 kg</p>
+                  </div>-->
+                  <div class="conteudo-expansivel">
+                    <h5>Classe de Fogo</h5>
+                    <p>2A</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            
+            
+        </div>
+    </div>
+    </section>
+
+      
+
+    <section id="slider-2">
+      <div class="container-swiper">
+          <div class="swiper" id="swiper-2">
+              <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                      <img src="../img/pergola1.png" alt="" />
+                  </div>  <!-- end swiper-slide -->
+                  <div class="swiper-slide">
+                      <img src="../img/pergola2.png" alt="" />
+                  </div>  <!-- end swiper-slide -->
+                  <div class="swiper-slide">
+                      <img src="../img/pergola3.png" alt="" />
+                  </div>  <!-- end swiper-slide -->
+                  <div class="swiper-slide">
+                    <img src="../img/pergola4.png" alt="" />
+                </div>  <!-- end swiper-slide -->
+                <div class="swiper-slide">
+                  <img src="../img/pergola5.png" alt="" />
+              </div>  <!-- end swiper-slide -->
+              </div> <!-- end swiper-wrapper -->
+          </div> <!-- end swiper -->
+      </div> <!-- end container -->
+  </section>
+
+ <!-- <h4 class="titulo-vista">Detalhes do produto</h4>-->
+
+
+<!-- <section class="vista">
+
+  <div  class="modais">
+    
+    <button id="myBtn" class="botaomodal">
+        <p>Vista Superior</p>
+        <img src="../img/vista-capela-11.png" alt="">
+    </button>
+
+
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Vista Superior</p>
+        <div class="img-vista">
+          <img src="../img/vista-capela-11.png" alt="">
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div  class="modais">
+    
+    <button id="myBtn2" class="botaomodal">
+      <div class="modal-div">
+        <p>Vista Frontal</p>
+        <img src="../img/vista-capela-2.png" alt="">
+      </div>
+      <div class="modal-div">
+        <p>Vista Lateral</p>
+        <img src="../img/vista-capela-3.png" alt="">
+      </div>
+    </button>
+
+
+    <div id="myModal2" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Vista Frontal</p>
+        <div class="img-vista2">
+          <img src="../img/vista-capela-2.png" alt="">
+        </div>
+        <p>Vista Lateral</p>
+        <div class="img-vista2">
+          <img src="../img/vista-capela-3.png" alt="">
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+ </section>-->
+
+  <section class="product-page-2">
+    <h4></h4>
+    <div class="product-details-2">
+        <!--**Img*************************-->
+        <div class="product-img-2">
+          <img src="../img/conforto.png" alt="" class="product-imgg-1">
+          <img src="../img/reconfiguracao.png" alt="" class="product-imgg-2">
+          <img src="../img/acessibilidade.png" alt="" class="product-imgg-3">
+          <img src="../img/personalizacao.png" alt="" class="product-imgg-4">
+        </div>
+
+
+        <!--**Text************************-->
+        <div class="product-text-2">
+            <div class="details-1" id="details1" >
+              <h3>Conforto Acústico</h3>
+              <p>
+                Altamente eficaz em controle de ruído, diminuindo o tempo de reverberação do som gerado dentro do ambiente, garantindo a inteligibilidade da fala. Criando assim, um ambiente mais produtivo e agradável.
+              </p>
+              <img src="../img/conforto.png" alt="" class="product-imgg">
+            </div>
+            <div class="details-2" id="details2" >
+              <h3>Reconfiguração In-Loco</h3>
+              <p>
+                Os módulos permitem que sejam realizados ajustes e pequenas modificações durante a instalação para atender a necessidade estética específica de cada ambiente, sem comprometer sua característica e resultado final.
+              </p>
+              <img src="../img/reconfiguracao.png" alt="" class="product-imgg">
+            </div>
+            <div class="details-3" id="details3" >
+              <h3>Acessibilidade</h3>
+              <p>
+                Sistemas integrados pela parte inferior e superior dos módulos. Um modelo de fixação que permite a remoção para manutenções e adequações de luzes, HVAC, fixadores de estruturas auxiliares, Infra e Sprinklers.
+              </p>
+             <img src="../img/acessibilidade.png" alt="" class="product-imgg">
+            </div>
+            <div class="details-4" id="details4">
+              <h3>Personalização com Cores</h3>
+              <p>
+                EcoSlim possui uma cartela de 26 cores que possibilita a personalização em cada peça tornando um produto único para cada projeto.              </p>
+              <img src="../img/personalizacao.png" alt="" class="product-imgg">
+            </div>
+            
+        </div>
+    </div>
+    </section>
+
+    <footer>
+      <div class="conteudo-footer">
+        <div class="footer-social">
+          <div>
+            <p>Novidades Avanço:</p>
+            <div class="email-field">
+              <input type="text" id="addemail" placeholder="Coloque seu email">
+              <label for="addemail" class="fa-solid fa-arrow-right"></label>
+            </div> 
+          </div>
+          <div class="icon-social">
+            <a href="#"><i class="ri-instagram-line"></i></a>
+            <a href="#"><i class="ri-linkedin-fill"></i></a>
+          </div>
+        </div>
+  
+        <div class="footer-links1">
+          <div class="ul-um">
+            <ul>
+              <li><a href="./index.php" class="nav_link">Home</a></li>
+              <li><a href="./solucoes.php" class="nav_link">Soluções Acústicas</a></li>
+              <li><a href="./servicos.php" class="nav_link">Serviços</a></li>
+              <li><a href="./catalogo.php" class="nav_link">Catálogo</a></li>
+  
+            </ul>
+          </div>
+  
+          <div class="ul-do">
+            <ul>
+              <li><a href="./about.php" class="nav_link">Quem Somos</a></li>
+              <li><a href="./contato.php" class="nav_link">Contato</a></li>
+              <li><a href="./sustentabilidade.php" class="nav_link">Sustentabilidade</a></li>
+            </ul>
+          </div>
+          <div class="ul-tr">
+            <ul>
+              <li><a href="tel:1131643610">(11) 3164-3610</a></li>
+              <li><a href="tel:1131643610">contato@avancoacustica.com.br</a></li>
+            </ul>
+          </div>
+        </div>
+  
+        <div class="footer-links2">
+            <ul>
+              <li><a href="./index.php" class="nav_link">Home</a></li>
+              <li><a href="./solucoes.php" class="nav_link">Soluções Acústicas</a></li>
+              <li><a href="./servicos.php" class="nav_link">Serviços</a></li>
+              <li><a href="./catalogo.php" class="nav_link">Catálogo</a></li>
+              <li><a href="./about.php" class="nav_link">Quem Somos</a></li>
+              <li><a href="./contato.php" class="nav_link">Contato</a></li>
+              <li><a href="./sustentabilidade.php" class="nav_link">Sustentabilidade</a></li>
+              <li><a href="tel:1131643610">(11) 3164-3610</a></li>
+              <li><a href="tel:1131643610">contato@avancoacustica.com.br</a></li>
+            </ul>
+      
+      </div>
+  
+  
+    </footer>
+
+<!--==Jquery===========================-->
+  <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+
+  <!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper("#swiper-1", {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      loop: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 0,
+        }
+      },
+    });
+
+
+    $('.s-checkbox').on('change', function() {
+      $('.s-checkbox').not(this).prop('checked', false);  
+  });
+  </script>
+
+  <script src="../js/main.js"></script>
+
+  <script>
+    new Swiper("#swiper-2", {
+    slidesPerView: 1,
+    centeredSlides: true,
+    spaceBetween: 16,
+    pagination: {
+        el: ("#swiper-2 .swiper-custom-pagination"),
+        clickable: true,
+        renderBullet: function (index, className) {
+        return `<div class=${className}>
+            <span class="number">${index + 1}</span>
+            <span class="line"></span>
+            </div>`;
+        }
+    },
+    lazyLoading: true,
+    loop: true,
+    keyboard: {
+        enabled: true,
+    },
+    breakpoints: {
+
+      559: {
+            slidesPerView: 2.9
+        },
+      
+        320: {
+            slidesPerView: 1.9
+        }
+    }
+});
+  </script>
+
+<script>
+
+var details2 = document.getElementById('details2');
+var productImgg2 = document.querySelector('.product-imgg-2');
+var details3 = document.getElementById('details3');
+var productImgg3 = document.querySelector('.product-imgg-3');
+var details4 = document.getElementById('details4');
+var productImgg4 = document.querySelector('.product-imgg-4');
+var details1 = document.querySelector('.details-1');
+var productImgg1 = document.querySelector('.product-imgg-1');
+
+details2.addEventListener('mouseover', function() {
+    productImgg2.style.opacity = '1';
+    details1.style.color = '#b8b8b8';
+    productImgg1.style.opacity = '0';
+});
+
+details2.addEventListener('mouseout', function() {
+    productImgg2.style.opacity = '0';
+    details1.style.color = '#000';
+    productImgg1.style.opacity = '1';
+});
+
+details3.addEventListener('mouseover', function() {
+    productImgg3.style.opacity = '1';
+    details1.style.color = '#b8b8b8';
+    productImgg1.style.opacity = '0';
+});
+
+details3.addEventListener('mouseout', function() {
+    productImgg3.style.opacity = '0';
+    details1.style.color = '#000';
+    productImgg1.style.opacity = '1';
+});
+
+details4.addEventListener('mouseover', function() {
+    productImgg4.style.opacity = '1';
+    details1.style.color = '#b8b8b8';
+    productImgg1.style.opacity = '0';
+});
+
+details4.addEventListener('mouseout', function() {
+    productImgg4.style.opacity = '0';
+    details1.style.color = '#000';
+    productImgg1.style.opacity = '1';
+});
+
+
+</script>
+
+<script>
+  $(document).ready(function () {
+    $(".div-produto").css("display", "none");
+
+    $("#ecoslim-grid-link").on("click", function (e) {
+      e.preventDefault();
+      window.location.href = "../../produtos.html?produto=grid";
+    });
+
+    $("#ecoslim-modulo-baffle-link").on("click", function (e) {
+      e.preventDefault();
+      window.location.href = "../../produtos.html?produto=modulo-baffle";
+    });
+
+    $("#ecoslim-baffle-link").on("click", function (e) {
+      e.preventDefault();
+      window.location.href = "../../produtos.html?produto=baffle";
+    });
+
+    $("#ecoslim-nuvem-link").on("click", function (e) {
+      e.preventDefault();
+      window.location.href = "../../produtos.html?produto=nuvem";
+    });
+
+    $("#ecoslim-divisoria-link").on("click", function (e) {
+      e.preventDefault();
+      window.location.href = "../../produtos.html?produto=divisoria";
+    });
+
+    $("#ecoslim-painel-link").on("click", function (e) {
+      e.preventDefault();
+      window.location.href = "../../produtos.html?produto=painel";
+    });
+
+    $("#ecoslim-biombo-link").on("click", function (e) {
+      e.preventDefault();
+      window.location.href = "../../produtos.html?produto=biombo";
+    });
+
+    $("#ecoslim-classica-link").on("click", function (e) {
+      e.preventDefault();
+      window.location.href = "../../produtos.html?produto=classica";
+    });
+
+    $("#ecoslim-office-link").on("click", function (e) {
+      e.preventDefault();
+      window.location.href = "../../produtos.html?produto=office";
+    });
+
+    // Adicione manipuladores de clique para outros links conforme necessário
+  });
+</script>
+
+<script>
+
+function toggleContent() {
+  var conteudo = document.getElementById("conteudo");
+  var icone = document.getElementById("icone");
+
+  var displayStyle = window.getComputedStyle(conteudo).display;
+
+  if (displayStyle === "none") {
+    conteudo.style.display = "block";
+    icone.innerHTML = "&#9660;"; // seta para baixo
+  } else {
+    conteudo.style.display = "none";
+    icone.innerHTML = "&#9654;"; // seta para a direita
+  }
+}
+
+</script>
+
+
+<script>
+
+  // Para o primeiro modal
+  var modal1 = document.getElementById("myModal");
+  var btn1 = document.getElementById("myBtn");
+
+  var span1 = document.getElementsByClassName("close")[0];
+
+  btn1.onclick = function() {
+    modal1.style.display = "block";
+    document.body.classList.add('modal-open');
+  }
+
+  span1.onclick = function() {
+    modal1.style.display = "none";
+    document.body.classList.remove('modal-open');
+  }
+
+  window.onclick = function(event) {
+    if (event.target == modal1) {
+      modal1.style.display = "none";
+    }
+  }
+
+  // Para o segundo modal
+  var modal2 = document.getElementById("myModal2");
+  var btn2 = document.getElementById("myBtn2");
+
+  var span2 = document.getElementsByClassName("close")[1]; // índice 1 para a segunda instância de "close"
+
+  btn2.onclick = function() {
+    modal2.style.display = "block";
+    document.body.classList.add('modal-open');
+  }
+
+  span2.onclick = function() {
+    modal2.style.display = "none";
+    document.body.classList.remove('modal-open');
+  }
+
+  window.onclick = function(event) {
+    if (event.target == modal2) {
+      modal2.style.display = "none";
+    }
+  }
+</script>
+
+
+
+</body>
+</html>
+
+    

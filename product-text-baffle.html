@@ -16,6 +16,34 @@
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
 
+    <style>
+      
+      .product-page-container{
+        margin-bottom: 200px;
+      }
+      footer{
+        margin-top: -100px;
+      }
+
+      @media screen and (max-width: 768px) {
+        
+          footer{
+            margin-top: -300px;
+          }
+    
+      }
+
+      
+      @media screen and (max-width: 425px) {
+    
+        footer{
+        margin-top: -100px;
+      }
+      
+      }
+
+  </style>
+
 </head>
 <body>
 
@@ -120,20 +148,36 @@
   </header>
       
     <!--==Product-Page=================================-->
-    <section class="product-page">
+   <section class="product-page">
     <div class="product-details">
         <!--**Img*************************-->
         <div class="product-img">
+          <img src="assets/img/baffle-1.png" alt="">
+        <!-- Swiper Slider -->
+         <!--   <div class="swiper" id="swiper-1">
+                <div class="swiper-wrapper">
+                
+                
+                  <div class="swiper-slide">
+                      <img src="../img/capela-prod-1.png" />
+                  </div>
+                
+                  <div class="swiper-slide">
+                      <img src="../img/capela-2.png" />
+                  </div>
+                  
+                  </div>
 
-          <div class="swiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide-baffle">
-                      <img src="assets/img/baffle-1.png" />
+                  <div class="slider-btns">
+                      <div class="swiper-button-prev"></div>
+                      <div class="swiper-button-next"></div>
+                  </div>
                 </div>
-            </div>
-          </div>
+
+        </div> -->
+
         </div>
-        <!--**Text************************-->
+
         <div class="product-text">
             <!--category-->
             <span class="product-category">EcoSlim | Baffle Standard</span>
@@ -150,17 +194,58 @@
               <br>
             </p>
 
+
             <!--btn-->
             <div class="product-button">
-                <a href="#" class="add-bag-btn">Download do Catálogo</a>
-                <a href="#" class="add-wishlist-btn">Download dos Blocos</a>
+                <a href="#" class="add-wishlist-btn">Download do Catálogo</a>
             </div>
+
             <!--help-btn-->
             <a href="#" class="help-btn">Peça seu orçamento</a>
+
+            <div class="expansivel">
+              <div class="expansivel-controle">
+                <div class="titulo-expansivel" onclick="toggleContent()">
+                  <h3>Especificações</h3>
+                  <span id="icone" class="seta">&#9654;</span>
+                </div>
+                <div class="conteudo" id="conteudo">
+                  <div class="conteudo-expansivel">
+                    <h5>Material</h5>
+                    <p>100% Lã de PET</p>
+                    <p>80% de fibra PET reciclada e 20% de fibra virgem</p>
+                  </div>
+                  <div class="conteudo-expansivel">
+                    <h5>Espessura</h5>
+                    <p>9mm</p>
+                  </div>
+                  <div class="conteudo-expansivel">
+                    <h5>Dimensões</h5>
+                    <p>2,40m x 2,40m</p>
+                  </div>
+                  <div class="conteudo-expansivel">
+                    <h5>Densidade</h5>
+                    <p>217kg/m³</p>
+                  </div>
+                  <!--<div class="conteudo-expansivel">
+                    <h5>Peso</h5>
+                    <p>5,19 kg</p>
+                  </div>-->
+                  <div class="conteudo-expansivel">
+                    <h5>Classe de Fogo</h5>
+                    <p>2A</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            
+            
         </div>
     </div>
     </section>
 
+    <div class="product-page-container">
     <div class="product-page">
       <h3 class="modelos-disp"> Modelos disponíveis</h3>
     </div>
@@ -243,17 +328,17 @@
 
       </div>
     </section>
-
+  </div>
       
 
   <section class="product-page-2">
     <div class="product-details-2">
         <!--**Img*************************-->
         <div class="product-img-2">
-         <img src="assets/img/conforto.JPG" alt="" class="product-imgg-1">
-          <img src="assets/img/reconfiguracao.JPG" alt="" class="product-imgg-2">
-          <img src="assets/img/acessibilidade.JPG" alt="" class="product-imgg-3">
-          <img src="assets/img/personalizacao.JPG" alt="" class="product-imgg-4">
+         <img src="assets/img/conforto.png" alt="" class="product-imgg-1">
+          <img src="assets/img/reconfiguracao.png" alt="" class="product-imgg-2">
+          <img src="assets/img/acessibilidade.png" alt="" class="product-imgg-3">
+          <img src="assets/img/personalizacao.png" alt="" class="product-imgg-4">
         </div>
 
 
@@ -294,15 +379,15 @@
             <div class="email-field">
               <input type="text" id="addemail" placeholder="Coloque seu email">
               <label for="addemail" class="fa-solid fa-arrow-right"></label>
-            </div>
+            </div> 
           </div>
           <div class="icon-social">
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#"><i class="ri-instagram-line"></i></a>
+            <a href="#"><i class="ri-linkedin-fill"></i></a>
           </div>
         </div>
   
-        <div class="footer-links">
+        <div class="footer-links1">
           <div class="ul-um">
             <ul>
               <li><a href="./index.php" class="nav_link">Home</a></li>
@@ -328,10 +413,21 @@
           </div>
         </div>
   
-  
+        <div class="footer-links2">
+            <ul>
+              <li><a href="./index.php" class="nav_link">Home</a></li>
+              <li><a href="./solucoes.php" class="nav_link">Soluções Acústicas</a></li>
+              <li><a href="./servicos.php" class="nav_link">Serviços</a></li>
+              <li><a href="./catalogo.php" class="nav_link">Catálogo</a></li>
+              <li><a href="./about.php" class="nav_link">Quem Somos</a></li>
+              <li><a href="./contato.php" class="nav_link">Contato</a></li>
+              <li><a href="./sustentabilidade.php" class="nav_link">Sustentabilidade</a></li>
+              <li><a href="tel:1131643610">(11) 3164-3610</a></li>
+              <li><a href="tel:1131643610">contato@avancoacustica.com.br</a></li>
+            </ul>
+      
       </div>
   
-      <div class="direitos">© 2023 • Todos os Direitos Reservados à Avanço Soluções Acústicas</div>
   
     </footer>
 
@@ -400,6 +496,7 @@
   </script>
 
 <script>
+
   var details2 = document.getElementById('details2');
   var productImgg2 = document.querySelector('.product-imgg-2');
   var details3 = document.getElementById('details3');
@@ -407,48 +504,66 @@
   var details4 = document.getElementById('details4');
   var productImgg4 = document.querySelector('.product-imgg-4');
   var details1 = document.querySelector('.details-1');
+  var productImgg1 = document.querySelector('.product-imgg-1');
   
-
   details2.addEventListener('mouseover', function() {
-      // Ação quando o mouse entra na div details-2
       productImgg2.style.opacity = '1';
       details1.style.color = '#b8b8b8';
-  });
-
-  details2.addEventListener('mouseout', function() {
-      // Ação quando o mouse sai da div details-2
-      productImgg2.style.opacity = '0';
-      details1.style.color = '#000';
-  });
-
-  details3.addEventListener('mouseover', function() {
-      // Ação quando o mouse entra na div details-2
-      productImgg3.style.opacity = '1';
-      details1.style.color = '#b8b8b8';
-  });
-
-  details3.addEventListener('mouseout', function() {
-      // Ação quando o mouse sai da div details-2
-      productImgg3.style.opacity = '0';
-      details1.style.color = '#000';
-  });
-
-  details4.addEventListener('mouseover', function() {
-      // Ação quando o mouse entra na div details-2
-      productImgg4.style.opacity = '1';
-      details1.style.color = '#b8b8b8';
-  });
-
-  details4.addEventListener('mouseout', function() {
-      // Ação quando o mouse sai da div details-2
-      productImgg4.style.opacity = '0';
-      details1.style.color = '#000';
+      productImgg1.style.opacity = '0';
   });
   
-</script>
+  details2.addEventListener('mouseout', function() {
+      productImgg2.style.opacity = '0';
+      details1.style.color = '#000';
+      productImgg1.style.opacity = '1';
+  });
+  
+  details3.addEventListener('mouseover', function() {
+      productImgg3.style.opacity = '1';
+      details1.style.color = '#b8b8b8';
+      productImgg1.style.opacity = '0';
+  });
+  
+  details3.addEventListener('mouseout', function() {
+      productImgg3.style.opacity = '0';
+      details1.style.color = '#000';
+      productImgg1.style.opacity = '1';
+  });
+  
+  details4.addEventListener('mouseover', function() {
+      productImgg4.style.opacity = '1';
+      details1.style.color = '#b8b8b8';
+      productImgg1.style.opacity = '0';
+  });
+  
+  details4.addEventListener('mouseout', function() {
+      productImgg4.style.opacity = '0';
+      details1.style.color = '#000';
+      productImgg1.style.opacity = '1';
+  });
+  
+  
+  </script>
 
 
+<script>
 
+  function toggleContent() {
+    var conteudo = document.getElementById("conteudo");
+    var icone = document.getElementById("icone");
+  
+    var displayStyle = window.getComputedStyle(conteudo).display;
+  
+    if (displayStyle === "none") {
+      conteudo.style.display = "block";
+      icone.innerHTML = "&#9660;"; // seta para baixo
+    } else {
+      conteudo.style.display = "none";
+      icone.innerHTML = "&#9654;"; // seta para a direita
+    }
+  }
+  
+  </script>
 
 </body>
 </html>

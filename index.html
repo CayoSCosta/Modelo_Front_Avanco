@@ -176,11 +176,13 @@
         <button class="js-carousel--simple-prev slide-button"><i class="ri-arrow-left-s-line"></i></button>
         <div class="c-carousel__slides js-carousel--simple">
           <div class="c-carousel__slide img_glider">
-            <img src="assets/img/baffleb11.png" alt="">
-            <div class="products-slides-description">
-              <span class="title">EcoSlim </span>
-              <span class="description">| Baffle</span>
-            </div>
+            <a href="product-text-baffle.html">
+              <img src="assets/img/baffleb11.png" alt="">
+              <div class="products-slides-description">
+                <span class="title">EcoSlim </span>
+                <span class="description">| Baffle</span>
+              </div>
+            </a>
           </div>
           <div class="c-carousel__slide img_glider">
             <img src="assets/img/urbano1.png" alt="">
@@ -266,7 +268,7 @@
               sofisticados e únicos. Um produto que aprimora a estética e a funcionalidade como sua principal
               característica, contendo em seu portfólio modelos pensados e criados para atender aos mais variados
               estilos de projetos arquitetônicos.</p>
-            <span class="btn">Saiba mais</span>
+            <span class="btn saibamais">Saiba mais</span>
           </div>
           <div class="img-flex">
             <img src="assets/img/parede.jpeg" alt="">
@@ -284,7 +286,7 @@
           <div class="texto-apresentacao">
             <h3>Sofisticação e Design</h3>
             <p>A linha Ecoslim permite com que o produto seja integrado com os demais elementos dentro do ambiente proporcionando mais personalidade para os locais onde são aplicados.</p>
-            <span class="btn">Saiba mais</span>
+            <span class="btn saibamais">Saiba mais</span>
           </div>
         </div>
       </div>
@@ -292,7 +294,7 @@
 
 
     <div class="img-apresentacao">
-      <h3>NOME DA OBRA</h3>
+      <h3></h3>
     </div>
 
     <section class="main" id="home">
@@ -304,7 +306,7 @@
               alta performance de absorção sonora, resistência a impactos
               e umidade. A solução ideal para uma variedade de aplicações.
               A inovação acústica encontra a responsabilidade ambiental.</p>
-            <span class="btn">Saiba mais</span>
+            <span class="btn saibamais">Saiba mais</span>
           </div>
           <div class="img-flex">
             <img src="assets/img/biombo.png" alt="">
@@ -428,6 +430,16 @@
       // Adicione manipuladores de clique para outros links conforme necessário
     });
   </script>
+
+<script>
+
+  document.querySelectorAll('.saibamais').forEach(function(button) {
+      button.addEventListener('click', function() {
+
+          window.location.href = 'ECOSLIM.html';
+      });
+  });
+</script>
 
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
